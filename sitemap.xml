@@ -4,133 +4,133 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>/</loc>
-<lastmod>2022-03-20T12:39:25-00:00</lastmod>
+<loc>elucidatalab.github.io/</loc>
+<lastmod>2022-03-20T14:07:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/archives.html</loc>
-<lastmod>2022-03-20T12:39:25-00:00</lastmod>
+<loc>elucidatalab.github.io/archives.html</loc>
+<lastmod>2022-03-20T14:07:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/search.html</loc>
-<lastmod>2022-03-20T12:39:25-00:00</lastmod>
+<loc>elucidatalab.github.io/search.html</loc>
+<lastmod>2022-03-20T14:07:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/404.html</loc>
-<lastmod>2022-03-20T12:39:25-00:00</lastmod>
+<loc>elucidatalab.github.io/404.html</loc>
+<lastmod>2022-03-20T14:07:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/about.html</loc>
-<lastmod>2022-03-20T12:39:25-00:00</lastmod>
+<loc>elucidatalab.github.io/about.html</loc>
+<lastmod>2022-03-20T14:07:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/skits.html</loc>
-<lastmod>2022-03-20T12:39:25-00:00</lastmod>
+<loc>elucidatalab.github.io/skits.html</loc>
+<lastmod>2022-03-20T14:07:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/{slug}.html</loc>
-<lastmod>2022-03-20T12:39:25-00:00</lastmod>
+<loc>elucidatalab.github.io/category/{slug}.html</loc>
+<lastmod>2022-03-20T14:07:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Blog/first-post.html</loc>
+<loc>elucidatalab.github.io/Blog/first-post.html</loc>
 <lastmod>2022-03-20T12:13:00+01:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2020-01-08-key-take-away-messages.html</loc>
+<loc>elucidatalab.github.io/Resource demand Forecasting/2020-01-08-key-take-away-messages.html</loc>
 <lastmod>2020-01-08T00:00:00+01:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2020-01-07-data-modelling-and-forecasting.html</loc>
+<loc>elucidatalab.github.io/Resource demand Forecasting/2020-01-07-data-modelling-and-forecasting.html</loc>
 <lastmod>2020-01-07T00:00:00+01:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2020-01-06-data-science-theory-advanced-regression-models.html</loc>
+<loc>elucidatalab.github.io/Resource demand Forecasting/2020-01-06-data-science-theory-advanced-regression-models.html</loc>
 <lastmod>2020-01-06T00:00:00+01:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2020-01-05-statistical-data-exploration-and-feature-engineering.html</loc>
+<loc>elucidatalab.github.io/Resource demand Forecasting/2020-01-05-statistical-data-exploration-and-feature-engineering.html</loc>
 <lastmod>2020-01-05T00:00:00+01:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2020-01-04-visual-data-exploration.html</loc>
+<loc>elucidatalab.github.io/Resource demand Forecasting/2020-01-04-visual-data-exploration.html</loc>
 <lastmod>2020-01-04T00:00:00+01:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2020-01-03-data-preprocessing.html</loc>
+<loc>elucidatalab.github.io/Resource demand Forecasting/2020-01-03-data-preprocessing.html</loc>
 <lastmod>2020-01-03T00:00:00+01:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2020-01-02-introduction.html</loc>
+<loc>elucidatalab.github.io/Resource demand Forecasting/2020-01-02-introduction.html</loc>
 <lastmod>2020-01-02T00:00:00+01:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2020-01-01-getting-started.html</loc>
+<loc>elucidatalab.github.io/Resource demand Forecasting/2020-01-01-getting-started.html</loc>
 <lastmod>2020-01-01T00:00:00+01:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2020-01-01-interactive-notebook.html</loc>
+<loc>elucidatalab.github.io/Resource demand Forecasting/2020-01-01-interactive-notebook.html</loc>
 <lastmod>2020-01-01T00:00:00+01:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/blog.html</loc>
+<loc>elucidatalab.github.io/category/blog.html</loc>
 <lastmod>2022-03-20T12:13:00+00:18</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/resource-demand-forecasting.html</loc>
+<loc>elucidatalab.github.io/category/resource-demand-forecasting.html</loc>
 <lastmod>2020-01-08T00:00:00+00:18</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
