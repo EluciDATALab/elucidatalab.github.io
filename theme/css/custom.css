@@ -2079,7 +2079,7 @@ margin-top: 20px;
 .solution_panel .solution_title {
     border-bottom: 2px solid #E6E9ED;
     padding: 11px 22px;
-	#background-color: #24292e;
+	/*background-color: #24292e;*/
     background-color: #1d3a69;
 }
 .solution_panel .solution_title h2,
