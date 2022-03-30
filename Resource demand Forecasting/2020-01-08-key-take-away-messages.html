@@ -157,15 +157,13 @@ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
             
             <h2 id="key-take-away-messages">Key Take Away Messages<a class="headerlink" href="#key-take-away-messages" title="Permanent link">&para;</a></h2>
 <p>In the video tutorial for this AI Starter Kit, we demonstrated forecasting the demand for a particular resource at a particular point in the future, illustrated on the case of energy demand forecasting. In doing so, we have taken you through the different steps in the data science workflow.</p>
-<p><section class="videos">
-                <div class="video">
+<p><div class="video">
                 <iframe
                     src="https://player.vimeo.com/video/600085743?h=492077c656&title=0&amp;byline=0&amp;portrait=0"
-                    width="640" height="390" frameborder="0"
+                    style="posiiton:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
                     webkitAllowFullScreen mozallowfullscreen allowFullScreen>
                 </iframe>
-            </div>
-            </section></p>
+            </div></p>
 <p>We first performed a number of required data preprocessing steps in order to prepare the data for further analysis. This included fusing the electricity and weather data, requiring to resampling the former data to a lower sampling rate.</p>
 <p>Subsequently, we explored the fused dataset in order to better understand which factors influence the household energy consumption. To this end, we resorted to both visual and statistical exploration methods. Based on this, we could identify a number of yearly, weekly, and daily patterns, including particular behavior during weekends and some holiday periods. This information formed the basis for the feature extraction that followed next, such as the energy consumption a week before, the day of the week and the hour of the day.</p>
 <p>Finally, we served the extracted features to two different models, namely Random Forest Regression and Support Vector Regression to perform the actual forecasting. Through different experiments, we analyzed the influence of the training strategy, type of machine learning model and effect of data normalization on the model performance. Based on this, it became clear that achieving good prediction results depends on different factors, including the appropriate data preprocessing, the amount of available training data and the algorithm parametrisation.</p>

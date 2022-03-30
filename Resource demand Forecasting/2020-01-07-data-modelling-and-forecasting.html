@@ -157,15 +157,13 @@ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
             
             <h2 id="data-modelling-and-forecasting">Data Modelling and Forecasting<a class="headerlink" href="#data-modelling-and-forecasting" title="Permanent link">&para;</a></h2>
 <p>Now that we gained the necessary insights from the data, extracted a number of meaningful features, and gained some theoretical background on regression models, we will use the AI Starter Kit to discover the most important factors for training a machine learning model. More specifically, we will analyze the influence of the training strategy, type of machine learning model and effect of data normalization on the model performance.</p>
-<p><section class="videos">
-                <div class="video">
+<p><div class="video">
                 <iframe
                     src="https://player.vimeo.com/video/609878671?h=d2717b5769&title=0&amp;byline=0&amp;portrait=0"
-                    width="640" height="390" frameborder="0"
+                    style="posiiton:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
                     webkitAllowFullScreen mozallowfullscreen allowFullScreen>
                 </iframe>
-            </div>
-            </section></p>
+            </div></p>
 <p>To evaluate the performance of the models the mean absolute error or MAE is used - a metric commonly used in literature for this purpose. This metric quantifies to what extent the model forecasts are close to the real values. As the name suggests, the mean absolute error is an average of the absolute errors. It holds that the lower the MAE of the model, the better its performance.</p>
 <p>As just mentioned, the training strategy, the machine learning model and the data normalization may influence the quality of the predictions. Before we start training a model, let us dive a bit deeper in these three influences.</p>
 <p>First of all, let us turn to the training strategy. The training data typically highly influences quality of the model. Therefore, in this starter kit, we will experiment with six different training strategies, to study their influence on the quality of the resulting model.</p>
