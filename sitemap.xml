@@ -5,49 +5,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2022-03-30T14:45:43-00:00</lastmod>
+<lastmod>2022-04-06T13:40:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2022-03-30T14:45:43-00:00</lastmod>
+<lastmod>2022-04-06T13:40:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/search.html</loc>
-<lastmod>2022-03-30T14:45:43-00:00</lastmod>
+<lastmod>2022-04-06T13:40:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/404.html</loc>
-<lastmod>2022-03-30T14:45:43-00:00</lastmod>
+<lastmod>2022-04-06T13:40:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/about.html</loc>
-<lastmod>2022-03-30T14:45:43-00:00</lastmod>
+<lastmod>2022-04-06T13:40:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/skits.html</loc>
-<lastmod>2022-03-30T14:45:43-00:00</lastmod>
+<lastmod>2022-04-06T13:40:12-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/home.html</loc>
+<lastmod>2022-04-06T13:40:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/{slug}.html</loc>
-<lastmod>2022-03-30T14:45:43-00:00</lastmod>
+<lastmod>2022-04-06T13:40:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
