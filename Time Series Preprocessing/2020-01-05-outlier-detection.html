@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+            <meta name="author" content="ELUCIDATALAB" />
+
+
+            <meta name="description" content="" />
+
+                <meta property="og:type" content="article" />
+            <meta name="twitter:card" content="summary"/>
+
+        <meta name="keywords" content=", Time Series Preprocessing, "/>
+
+        <link rel="canonical" href="/Time Series Preprocessing/2020-01-05-outlier-detection.html">
+    <meta property="og:title" content="Outlier Detection | EluciDATA Lab"/>
+    <meta property="og:url" content="/Time Series Preprocessing/2020-01-05-outlier-detection.html" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="EluciDATA Lab" />
+    <meta property="og:article:author" content="ELUCIDATALAB" />
+        <meta property="og:article:published_time" content="2020-01-05T00:00:00+01:00" />
+    <meta name="twitter:title" content="Outlier Detection | EluciDATA Lab">
+    <meta name="twitter:description" content="">
+        <meta property="og:image" content="/../Time Series Preprocessing/img/SK_specific/TSP_figure10.png" />
+        <meta name="twitter:image" content="/../Time Series Preprocessing/img/SK_specific/TSP_figure10.png" >
+
+
+        <title>    Outlier Detection  | EluciDATA Lab
+</title>
+
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+            <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+            <link rel="stylesheet" type="text/css" href="/theme/css/ipynb.css" media="screen">
+
+            <style>
+                #progressBar::-webkit-progress-value {
+                    background-color: #24292e;
+                }
+                #progressBar::-moz-progress-bar {
+                    background-color: #24292e;
+                }
+            </style>
+
+        <link href="/theme/libs/prism.css" rel="stylesheet" />
+<script type="text/x-mathjax-config">
+
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+  linebreaks: { automatic: true, width: "container" }
+}
+});
+
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+        <link rel="shortcut icon" href="/theme/img/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/theme/img/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/img/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/img/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/img/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/img/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/img/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/img/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/img/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/img/apple-touch-icon-152x152.png" type="image/png" />
+    </head>
+    <body>
+<progress id="progressBar" max="19827" class="flat">
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+</progress>        <div class="banner-wrapper row" style="background-color: #24292e;">
+            <div class="banner">
+                <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light container">
+                    <div class="container navbar-title">
+                        <a href="/"><img id="banner-logo" src="/theme/img/profile_photo_white.png" style="height: 40px; margin: 6px 0;"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" style="margin-bottom: 6.5px;margin-top: 6.5px">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/home.html">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/blog.html">Blog</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/skits.html">Starterkits</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/about.html">About</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li id="second-item" class="nav-item">
+                            <a class="nav-link rem_08" href="/archives.html">Archive</a>
+                        </li>
+                     </ul>
+                    <ul class="navbar-nav">
+                    <form id="search-form" class="form-inline my-2 my-lg-0 justify-content-center" action="/search.html">
+                        <div id="third-item" class="search-box-div row" style="margin-top:-3.5px;">
+                            <input id="tipue_search_input" class="form-control mr-md-2 rem_08 col-9" type="text" name="q" pattern=".{3,}" title="At least 3 characters" required="" aria-label="Search"/>
+                            <button id="search-btn" class="btn btn-search btn-outline-success btn-circle rem_08 col-3" type="submit" for="tipue_search_input" style="margin-left: 3px;">Search</button>
+                        </div>
+                    </form>
+                    </ul>
+                </div>
+                </nav>
+            </div>
+        </div>
+        <div id="wrap">
+<div id="post-container" class="container post index">
+    <article>
+        <header class="pop-over">
+            <h1>Outlier Detection</h1>
+            <div class="row justify-content-between no-margin">
+                <h4 class="article-category">Category > <a class="article-category-link" href="/archives.html">Time Series Preprocessing</a></h4>
+                <span class="article-date">Sun 05 January 2020</span>
+            </div>
+            <div class="meta meta-tag no-margin no-border">
+                <div>
+                </div>
+            </div>
+            <section>
+    <div class="row justify-content-end mt-3" style="align-items: center">
+        <div class="share-post-intro mr-2">Share This Post :</div>
+        <div class="social-share-btns-container">
+            <div class="social-share-btns">
+                <a class="share-btn share-btn-twitter" href="https://twitter.com/intent/tweet?text=Outlier%20Detection&url=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2020-01-05-outlier-detection.html" rel="nofollow" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="share-btn share-btn-facebook" href="http://www.facebook.com/sharer/sharer.php?u=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2020-01-05-outlier-detection.html" rel="nofollow" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="share-btn share-btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2020-01-05-outlier-detection.html&title=Outlier%20Detection&summary=Outlier%20Detection%C2%B6%0A%0A%0A%0A%0AIn%20the%20previous%20video%20we%20explored%20the%20data%20mainly%20in%20a%20visual%20manner.%20In%20this%20fourth%20video%2C%0Awe%20will%20discuss%20how%20to%20detect%20outliers%20in%20the%20data%20and%20how%20different%20methods%20can%20be%20used%20to%20improve%20the%20data%20quality.%0AThere%20are%20several%20different%20techniques%20for%20outlier%20detection%20in%20%E2%80%A6&source=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2020-01-05-outlier-detection.html" rel="nofollow" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </header>
+        <div class="article_content">
+            
+            <h2 id="outlier-detection">Outlier Detection<a class="headerlink" href="#outlier-detection" title="Permanent link">&para;</a></h2>
+<p><br/></p>
+<p align="center"><iframe src="https://player.vimeo.com/video/596616333?h=bb150f1b93&color=e700ef" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<br/></p>
+<p><br/></p>
+<p>In the previous video we explored the data mainly in a visual manner. In this fourth video,
+we will discuss how to detect outliers in the data and how different methods can be used to improve the data quality.</p>
+<p>There are several different techniques for outlier detection in time-series. Here, we will focus on online outlier detection, that means the detection of an outlier as soon as it occurs, as opposed to an offline detection,
+which happens retrospectively. We present two different approaches for outlier detection using temperature and wind speed variables.</p>
+<p>A relatively simple and frequently used approach for outlier detection is based on the boxplot data distribution.</p>
+<p><center><img src="./img/SK_specific/TSP_figure8.png" width="400" class="center" /></center></p>
+<p>For a given attribute, this method computes its interquartile range or IQR, which is the difference between the 25th and 75th percentiles. This value is then multiplied by a constant factor 𝛼 which determines how stringent the outlier detection is. A typical value for 𝛼 is 1.5, although this value can be adapted according to the level of stringiness desired. Indeed, larger values will push the outlier boundaries further  and thereby reducing the number of detected outliers. The resulting value is subtracted from the 25th and added to the 75th percentiles to obtain the lower and upper fences, respectively, which define the thresholds beyond which a given value is labelled as an outlier.</p>
+<p>Considering the seasonal nature of the data, we should ensure that the outlier detection approach takes the impact of seasonality into account. It is known that the temperature has significant seasonal variation as it varies between day and night or between winter and summer for example and the same temperature in winter and in summer can be considered as outlier in one case, but not in the other. Therefore, the seasonal trend decomposition described in the former video is applied to the signal and the residuals are used as input for the outlier detection. In doing so, we only take the distance to the seasonal pattern into account for the outlier detection.</p>
+<p><center><img src="./img/SK_specific/TSP_figure9.png" width="400" class="center" /></center></p>
+<p>In the example shown on the right, we identify outlier events based on a given 𝛼 value. We define outlier events as outliers that are consecutive in time. An additional input parameter allows to merge outlier events that are separated by less than a given amount of time. When using the most stringent alpha value - in our case – we detect a single outlier in the dataset: namely one of the turbines measured a temperature of -273 degrees for a period of time.</p>
+<p><center><img src="./img/SK_specific/TSP_figure10.png" width="400" class="center" /></center></p>
+<p>Further, we can visualize the time series around the time of a given outlier event. The Flank duration parameter allows you to control the time window around the outlier for the visualization. The left figure shows the time series
+with the outlier event highlighted in blue, while the figure on the right shows the distribution of all the temperature residual values using a boxplot. Again, the points in blue indicate the outlier event depicted on the left. When increasing the flank duration, we clearly see that this measurement is an outlier. Of course,
+to identify an outlier with a temperature of -273 degrees, you don’t need data science. Hence, We also have a look at another outlier detected with a smaller value for alpha, namely 1.5.</p>
+<p><center><img src="./img/SK_specific/TSP_figure11.png" width="400" class="center" /></center></p>
+<p>In this case, the outlier is not as evident as before.
+On the 23rd of August, the temperature was much higher than on a normal day in August and warmer than the days before and after.</p>
+<p>An important aspect we want to discuss in this respect is the influence of outlier detection and removal on normalization. Normalization is a typical data pre-processing step where the range of a variable is standardized,
+meaning rescaled in order to make different variables with different ranges comparable. It is an important pre-processing step before the data is presented to a machine learning algorithm, as it ensures all variables have equal importance.</p>
+<p>Different normalization approaches exist. Examples are rescaling the values in the 0-1 range, known as min-max normalization, or removing the mean and scaling to unit variance, known as z-score or standard score normalization. Most of these approaches are sensitive to outliers: For example, in the case of min-max normalization, the minimum value is mapped to 0 and the maximum to 1 so obviously extreme outliers will have a large impact.</p>
+<p>In the starterkit, we can test these two normalization approaches on each of the attributes of the dataset. We can enable or disable the outlier removal in order to appreciate how this affects the normalization procedure. This effect is most striking when looking at the temperature attribute.</p>
+<p>If we do not remove the outliers, the min-max normalization is meaningless as 0 is mapped onto -273 degrees. All remaining values are then in the range between 0.8 and 1. When removing the outliers, the range between 0 and 1 is equally dense and the normalization reflects the seasonality in the data.</p>
+<p><center><img src="./img/SK_specific/TSP_figure12.png" width="400" class="center" /></center></p>
+<p>A second approach is the so-called Fleet-based outlier detection.</p>
+<p>For detecting outliers of the power attribute, we will use this alternative approach. Note, that this is only for the purpose of demonstration and that we could also use the interquartile range-base outlier detection for the power attribute.</p>
+<p>The approach we will use is based on exploiting the fleet aspect, which is exemplified by wind turbines, which typically operate as part of a wind park in the same environment under similar environmental conditions.</p>
+<p>At each point in time, we compute the median power recorded by the fleet and we consider any value that deviates too much from that median value to be an outlier. To determine what constitutes too much deviation, we again consider the boxplot outlier definition. If a value is beyond 5 times the IQR from the 25th or 75th percentile, we consider the observation to be an outlier. To exclude periods during which all the turbines in the fleet were not operational, we only consider time points when at least 3 of the 4 turbines recorded a power production above 0.</p>
+<p><center><img src="./img/SK_specific/TSP_figure13.png" width="400" class="center" /></center></p>
+<p>The starter kit allows us to explore all the detected outliers in the power attribute using this definition. We can change the Flank parameter in order to see a larger time window around the outlier. It can be observed that the outliers often happen in periods of time when the power of a given turbine dropped to 0 without it being the case for the remaining turbines.</p>
+<p>There are, nonetheless, other instances, when the produced power of a given turbine was - statistically speaking – above what would be expected given the behaviour of the remaining turbines. Note that the grey square highlights only the fleet outlier event in question. Other points in the visualization might also be labelled as outliers but they are not part of the same event.</p>
+<p>The fleet-based approach has the advantage of being able to capture outliers at a specific moment in time only relying on sensor values captured at that time. On the contrary, this approach can only be applied if the dataset contains a fleet of co-located assets, meaning that they are exposed to similar conditions.</p>
+<p>In the next video, we will discuss how we can impute missing data in the dataset and therewith improve the quality of the data.</p>
+        </div>
+        <hr/>
+        <aside>
+        <nav>
+        <ul class="articles-timeline">
+            <li class="previous-article">« <a href="/Resource demand Forecasting/2020-01-05-statistical-data-exploration-and-feature-engineering.html" title="Previous: Statistical Data Exploration and Feature Engineering">Statistical Data Exploration and Feature Engineering</a></li>
+            <li class="next-article"><a href="/Remaining Useful Life Prediction/2020-01-05-data-preprocessing.html" title="Next: Data Preprocessing">Data Preprocessing</a> »</li>
+        </ul>
+        </nav>
+        </aside>
+        <hr/>
+    </article>
+</div>
+        </div>
+<footer class="footer">
+   <div class="container bottom_border">
+      <div class="row">
+         <div class="col">
+            <h5 class="headin5_amrc col_white_amrc pt2">ABOUT EluciDATA Lab</h5>
+            <!--headin5_amrc-->
+            <p class="mb10"><img id="profile_img" align="left" src="/theme/img/PoweredBySirris_negatif.png"></p>
+            <p><i class="fa fa-envelope mr-2"></i>elucidatalab@sirris.be</p>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <ul class="foote_bottom_ul_amrc">
+         <li><a href="/">HOME</a></li>
+         <li><a href="about.html">ABOUT</a></li>
+         <li><a href="archives.html">ARCHIVE</a></li>
+      </ul>
+      <!--foote_bottom_ul_amrc ends here-->
+      <p class="text-center">&copy Sirris <a href="https://elucidata.be/gebruikersovereenkomst">Gebruikersovereenkomst</a> <a href="https://elucidata.be/privacy-policy">Privacy policy</a><br>EluciDATA Lab -The Data and AI Competence Lab of Sirris</p>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="row" align="center">
+                  <div class="footer-icon"><a href="https://www.linkedin.com/company/sirris/"><i class="fab fa-linkedin-in"></i></a></div>
+                  <div class="footer-icon"><a href="https://github.com/orgs/EluciDATALab"><i class="fab fa-github"></i></a></div>
+              </div>
+          </div>
+      </div>
+
+      <!--social_footer_ul ends here-->
+   </div>
+</footer>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script src="/theme/libs/prism.js"></script>
+        <script src="/theme/libs/Countable.js"></script>
+
+        <script>
+            Prism.plugins.NormalizeWhitespace.setDefaults({
+                'remove-trailing': true,
+                'remove-indent': true,
+                'left-trim': true,
+                'right-trim': true,
+                /*'break-lines': 80,
+                'indent': 2,
+                'remove-initial-line-feed': false,
+                'tabs-to-spaces': 4,
+                'spaces-to-tabs': 4*/
+            });
+        </script>
+
+
+        <script type="text/javascript" src="/theme/js/custom.js"></script>
+            <script>
+                function validateForm(query)
+                {
+                    return (query.length > 0);
+                }
+            </script>
+    </body>
+</html>
+
