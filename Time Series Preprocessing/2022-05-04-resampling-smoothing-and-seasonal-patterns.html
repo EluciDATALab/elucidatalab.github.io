@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+            <meta name="author" content="ELUCIDATALAB" />
+
+
+            <meta name="description" content="" />
+
+                <meta property="og:type" content="article" />
+            <meta name="twitter:card" content="summary"/>
+
+        <meta name="keywords" content=", Time Series Preprocessing, "/>
+
+        <link rel="canonical" href="/Time Series Preprocessing/2022-05-04-resampling-smoothing-and-seasonal-patterns.html">
+    <meta property="og:title" content="Resampling, Smoothing and Seasonal Patterns | EluciDATA Lab"/>
+    <meta property="og:url" content="/Time Series Preprocessing/2022-05-04-resampling-smoothing-and-seasonal-patterns.html" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="EluciDATA Lab" />
+    <meta property="og:article:author" content="ELUCIDATALAB" />
+        <meta property="og:article:published_time" content="2022-05-04T00:00:00+02:00" />
+    <meta name="twitter:title" content="Resampling, Smoothing and Seasonal Patterns | EluciDATA Lab">
+    <meta name="twitter:description" content="">
+        <meta property="og:image" content="/../Time Series Preprocessing/img/SK_specific/TSP_figure7.png" />
+        <meta name="twitter:image" content="/../Time Series Preprocessing/img/SK_specific/TSP_figure7.png" >
+
+
+        <title>    Resampling, Smoothing and Seasonal Patterns  | EluciDATA Lab
+</title>
+
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+            <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+            <link rel="stylesheet" type="text/css" href="/theme/css/ipynb.css" media="screen">
+
+            <style>
+                #progressBar::-webkit-progress-value {
+                    background-color: #24292e;
+                }
+                #progressBar::-moz-progress-bar {
+                    background-color: #24292e;
+                }
+            </style>
+
+        <link href="/theme/libs/prism.css" rel="stylesheet" />
+<script type="text/x-mathjax-config">
+
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+  linebreaks: { automatic: true, width: "container" }
+}
+});
+
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+        <link rel="shortcut icon" href="/theme/img/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/theme/img/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/img/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/img/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/img/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/img/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/img/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/img/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/img/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/img/apple-touch-icon-152x152.png" type="image/png" />
+    </head>
+    <body>
+<progress id="progressBar" max="19827" class="flat">
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+</progress>        <div class="banner-wrapper row" style="background-color: #24292e;">
+            <div class="banner">
+                <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light container">
+                    <div class="container navbar-title">
+                        <a href="/"><img id="banner-logo" src="/theme/img/profile_photo_white.png" style="height: 40px; margin: 6px 0;"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" style="margin-bottom: 6.5px;margin-top: 6.5px">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/home.html">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/blog.html">Blog</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/skits.html">Starterkits</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/about.html">About</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li id="second-item" class="nav-item">
+                            <a class="nav-link rem_08" href="/archives.html">Archive</a>
+                        </li>
+                     </ul>
+                    <ul class="navbar-nav">
+                    <form id="search-form" class="form-inline my-2 my-lg-0 justify-content-center" action="/search.html">
+                        <div id="third-item" class="search-box-div row" style="margin-top:-3.5px;">
+                            <input id="tipue_search_input" class="form-control mr-md-2 rem_08 col-9" type="text" name="q" pattern=".{3,}" title="At least 3 characters" required="" aria-label="Search"/>
+                            <button id="search-btn" class="btn btn-search btn-outline-success btn-circle rem_08 col-3" type="submit" for="tipue_search_input" style="margin-left: 3px;">Search</button>
+                        </div>
+                    </form>
+                    </ul>
+                </div>
+                </nav>
+            </div>
+        </div>
+        <div id="wrap">
+<div id="post-container" class="container post index">
+    <article>
+        <header class="pop-over">
+            <h1>Resampling, Smoothing and Seasonal Patterns</h1>
+            <div class="row justify-content-between no-margin">
+                <h4 class="article-category">Category > <a class="article-category-link" href="/archives.html">Time Series Preprocessing</a></h4>
+                <span class="article-date">Wed 04 May 2022</span>
+            </div>
+            <div class="meta meta-tag no-margin no-border">
+                <div>
+                </div>
+            </div>
+            <section>
+    <div class="row justify-content-end mt-3" style="align-items: center">
+        <div class="share-post-intro mr-2">Share This Post :</div>
+        <div class="social-share-btns-container">
+            <div class="social-share-btns">
+                <a class="share-btn share-btn-twitter" href="https://twitter.com/intent/tweet?text=Resampling%2C%20Smoothing%20and%20Seasonal%20Patterns&url=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2022-05-04-resampling-smoothing-and-seasonal-patterns.html" rel="nofollow" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="share-btn share-btn-facebook" href="http://www.facebook.com/sharer/sharer.php?u=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2022-05-04-resampling-smoothing-and-seasonal-patterns.html" rel="nofollow" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="share-btn share-btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2022-05-04-resampling-smoothing-and-seasonal-patterns.html&title=Resampling%2C%20Smoothing%20and%20Seasonal%20Patterns&summary=Resampling%2C%20Smoothing%20and%20Seasonal%20Patterns%C2%B6%0A%0A%0A%0A%0AWelcome%20to%20the%20third%20video%20of%20the%20tutorial%20for%20the%20AI%20Starter%20Kit%20on%20time-series%20pre-processing%21%20In%20the%20previous%20video%2C%20we%20already%20had%20a%20look%20at%20the%20temperature%20values%20and%20saw%20a%20clear%20seasonal%20pattern.%20For%20active%20power%20and%20wind%20speed%20however%2C%20it%E2%80%99s%20not%20%E2%80%A6&source=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2022-05-04-resampling-smoothing-and-seasonal-patterns.html" rel="nofollow" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </header>
+        <div class="article_content">
+            <!--            -->
+            <h2 id="resampling-smoothing-and-seasonal-patterns">Resampling, Smoothing and Seasonal Patterns<a class="headerlink" href="#resampling-smoothing-and-seasonal-patterns" title="Permanent link">&para;</a></h2>
+<p><br/></p>
+<p align="center"><iframe src="https://player.vimeo.com/video/596614654?h=9d042bc6d5&color=e700ef" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<br/></p>
+<p><br/></p>
+<p>Welcome to the third video of the tutorial for the AI Starter Kit on time-series pre-processing! In the previous video, we already had a look at the temperature values and saw a clear seasonal pattern. For active power and wind speed however, it’s not so easy to answer if particular patterns are present because the data is noisier.</p>
+<p>In general, visualizing time-series data with a high temporal granularity might make it difficult to interpret and detect underlying patterns.</p>
+<p>Resampling techniques allow to reduce the temporal granularity, thereby revealing longer-term trends and hiding sharp, fast fluctuations in the signal.</p>
+<p><center><img src="./img/SK_specific/TSP_figure5.png" width="400" class="center" /></center></p>
+<p>In the interactive starter kit we can select the amount of resampling by specifying the time unit and the number of time units to resample to. For example, we can resample the data to weekly values. For this, we set the time unit to "Week" and the number of time units to 1.</p>
+<p>Playing with these two inputs, we see how the level of detail of the time series changes and how that influences the insights that we can derive from it.</p>
+<p>In a first step, we select a small resampling factor, for example a daily resampling. We observe that the visualization of the temperature shows a seasonal pattern in the data, even though strong stochastic fluctuations dominate the overall picture. At this level of granularity, the visualization of the wind speed is not at all interpretable due to these fluctuations, especially when visualizing over such a long period of time. Specifically, if we are interested to visualize the long-term trend of the time series, we need to reduce the sampling rate.</p>
+<p>To this end, we need to increase the resampling rate to a weekly resampling. We then see how these high frequency patterns disappear and it becomes possible to analyse some long-term fluctuations in the power and wind speed variables. You can notably observe the strict correlation between the patterns of wind speed and active power, which might be obvious: the more wind, the higher the power that can be generated by the turbine. Note also that by increasing the resampling of the time series too much, most of the information it contains is discarded.</p>
+<p>It is also important to understand that resampling aggregates the data for the specified period. Hence, we need to specify how we want the data to be aggregated. For the wind speed and temperature data in our example, we can opt to aggregate the data using the median of the values within the selected period. Like this, we level out very high or very low values. Therefore, this statistic is quite robust against outliers that could be present in our dataset. For other quantities, we might consider other statistics. For example, if we were considering power production, the interesting value is the power produced per day or week. Consequently, it makes more sense to sum all the data samples rather than to average them. Does the sum function also make sense for the temperature or wind speed?</p>
+<p>Think about it and then try different resamplings by changing the aggregation function or resampling units used.</p>
+<p>As we can see, a simple resampling makes additional details explicit, and the degree of resampling allows drawing different insights. For example, with a weekly sampling rate the temperature plot still shows a clear seasonal pattern. However, we can also see that in each year the weekly temperature evolves in a different manner: the highest and lowest temperatures are located in different weeks. Further, the wind speed also seems to follow a seasonal pattern, albeit a less explicit one.</p>
+<p>We can notice that the wind speed is generally higher in winter, yet its evolution is much more dynamic than the one of temperature. Finally, the power production closely follows the wind speed profile, consistent with the latter being its main driver.</p>
+<p>Important to keep in mind when resampling your own data is that it can help to find seasonal patterns but that it can also hide patterns when the scale is too big. To make this more tangible, imagine that you resample the data to an annual scale. In our example, you will not see the seasonality anymore. When you perform resampling on your own data
+a domain expert typically can support you to find a good scale by reasoning about the underlying phenomenon from which the data originates.</p>
+<p>In many data sources, stochastic fluctuations can be seen on different temporal scales. Some of those might be small variations that may not be significant for what you want to detect. These types of fluctuations can be real,
+such as, due to sudden decreases in temperatures between summer nights, but can also be caused by inaccurate measurements of the sensor, for example.</p>
+<p>If such details are not important to consider for your analysis, you can remove them by smoothing.</p>
+<p>In our interactive Starter Kit, we explore three different smoothing approaches, namely the rolling window algorithm, Gaussian smoothing and Savgol filters.</p>
+<p>The easiest approach is the rolling window algorithm: The user defines a small, fixed period – the window. The algorithm runs over the data taking into account the consecutive time points covered within the window, and replaces each time point by an aggregated value computed within this window. Typically, the aggregation follows the mean or the median value. This has the effect of reducing short-term fluctuations while preserving longer-term trends.</p>
+<p>When using Gaussian smoothing, the method summarizes the values over a sliding window, just as the rolling window algorithm. But instead of calculating the mean or median value, a Gaussian function is used. The size of the sliding window is specified by the standard deviation of this Gaussian function, which is called a kernel. With this method,
+the values closest to the centre of the sliding window will have a stronger impact on the smoothing process. The impact of the remaining values is a function of the distance to the window centre.</p>
+<p>Finally, the Savgol filter is a popular filter in signal processing and is based on a convolution approach. It fits a low-degree polynomial to successive subsets of adjacent data points via the linear least-squares method. Note that also here a window is defined. In our Starter Kit, we use a polynomial of degree 2.</p>
+<p><center><img src="./img/SK_specific/TSP_figure6.png" width="400" class="center" /></center></p>
+<p>Now that we know the general idea of smoothing, We can experiment with these different approaches in the interactive starter kit. At the top of the graph, we can select one of the explained methods. Using the time unit controls, we can explore how the level of detail resulting from the smoothing varies for different window sizes. Can you strike a good balance between too much and too little detail? This is a difficult question to answer, as it strictly depends on the goal of the analysis.</p>
+<p>Smoothing using a large time window, for example, several days, can be useful to detect slow, long-term changes to the time series. On the other hand, a shorter time window, let’s say 12 hours, can be very efficient to analyse short-lasting changes in the signal by getting rid of fast transients in the signal.</p>
+<p>There are also some significant differences in the presented methods. If you chose the rolling median method and zoom in, you will be able to see that the signal appears 'shifted'. This is due to the fact that the rolling window implementation of the Python pandas library that was used, uses a look-ahead option, where the value at any given point in time is given by a time window ahead of it. Another interesting aspect is how the Gaussian method creates a signal that is characterized by smooth 'Gaussian-like' hills, a consequence of its Gaussian kernel-based nature.</p>
+<p>In sum, the Savgol and rolling window approaches create a signal that more closely follows the original signal. This is due to the fact that both operate using a local estimation approach: the latter method aggregates values over a local time window, while the former applies a least-squares regression over the specified time window.</p>
+<p>We previously discussed the seasonal patterns that can be observed in certain variables such as temperature. One technique that allows analysing the seasonal patterns in a time-series signal and to decompose the signal into different components is called Seasonal Trend Decomposition. This technique identifies cyclical patterns in the signal and decompose it into 3 components: First, the trend, which summarizes the long-term trend of the time-series in the considered time frame. A second component is the seasonal component: this is the part of the signal that can be attributed to repeating patterns in the signal. Finally, the residuals are the "left-overs" after subtracting the trend and the seasonal factors from the original signal. This is the component of the time-series that cannot be attributed to either the long-term trend evolution of the signal or the seasonal patterns.</p>
+<p><center><img src="./img/SK_specific/TSP_figure7.png" width="400" class="center" /></center></p>
+<p>In the starter kit, we can analyse the seasonal trend decomposition over two periods: a seasonal period that covers the four yearly seasons and a daily period. If we select a seasonal decomposition over a sufficiently large period,
+we can clearly observe the yearly temperature pattern, with higher temperatures in the summer months and lower ones in the winter months. If you test a daily decomposition over the same period of time you will need to zoom-in on a short-time range and similarly see a pattern in the seasonal component, namely the 24-hour temperature cycle. You can also test how the seasonal trend decomposition performs on a less cyclical signal, such as power production. Indeed, since power production is mainly driven by the amount of wind and wind speed, each showing a weak seasonal modulation, power production can only be poorly expressed in terms of its seasonal component.</p>
+<p>In the next video, we will discuss how outliers can be detected in seasonal data with stochastic fluctuations.</p>
+        </div>
+        <hr/>
+        <aside>
+        <nav>
+        <ul class="articles-timeline">
+            <li class="previous-article">« <a href="/Resource demand Forecasting/2022-05-04-visual-data-exploration.html" title="Previous: Visual Data Exploration">Visual Data Exploration</a></li>
+            <li class="next-article"><a href="/Remaining Useful Life Prediction/2022-05-04-deep-learning-theory.html" title="Next: Deep Learning Theory">Deep Learning Theory</a> »</li>
+        </ul>
+        </nav>
+        </aside>
+        <hr/>
+    </article>
+</div>
+        </div>
+<footer class="footer">
+   <div class="container bottom_border">
+      <div class="row">
+         <div class="col">
+            <h5 class="headin5_amrc col_white_amrc pt2">ABOUT EluciDATA Lab</h5>
+            <!--headin5_amrc-->
+            <p class="mb10"><img id="profile_img" align="left" src="/theme/img/PoweredBySirris_negatif.png"></p>
+            <p><i class="fa fa-envelope mr-2"></i>elucidatalab@sirris.be</p>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <ul class="foote_bottom_ul_amrc">
+         <li><a href="/">HOME</a></li>
+         <li><a href="about.html">ABOUT</a></li>
+         <li><a href="archives.html">ARCHIVE</a></li>
+      </ul>
+      <!--foote_bottom_ul_amrc ends here-->
+      <p class="text-center">&copy Sirris <a href="https://elucidata.be/gebruikersovereenkomst" target="_blank">Gebruikersovereenkomst</a> <a href="https://elucidata.be/privacy-policy" target="_blank">Privacy policy</a><br>EluciDATA Lab -The Data and AI Competence Lab of Sirris</p>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="row" align="center">
+                  <div class="footer-icon"><a href="https://www.linkedin.com/company/sirris/"><i class="fab fa-linkedin-in"></i></a></div>
+                  <div class="footer-icon"><a href="https://github.com/orgs/EluciDATALab"><i class="fab fa-github"></i></a></div>
+              </div>
+          </div>
+      </div>
+
+      <!--social_footer_ul ends here-->
+   </div>
+</footer>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script src="/theme/libs/prism.js"></script>
+        <script src="/theme/libs/Countable.js"></script>
+
+        <script>
+            Prism.plugins.NormalizeWhitespace.setDefaults({
+                'remove-trailing': true,
+                'remove-indent': true,
+                'left-trim': true,
+                'right-trim': true,
+                /*'break-lines': 80,
+                'indent': 2,
+                'remove-initial-line-feed': false,
+                'tabs-to-spaces': 4,
+                'spaces-to-tabs': 4*/
+            });
+        </script>
+
+
+        <script type="text/javascript" src="/theme/js/custom.js"></script>
+            <script>
+                function validateForm(query)
+                {
+                    return (query.length > 0);
+                }
+            </script>
+    </body>
+</html>
+

@@ -15,22 +15,22 @@
                 <meta property="og:type" content="article" />
             <meta name="twitter:card" content="summary"/>
 
-        <meta name="keywords" content=", Blog, "/>
+        <meta name="keywords" content=", Time Series Preprocessing, "/>
 
-        <link rel="canonical" href="/Blog/first-post.html">
-    <meta property="og:title" content="Welcome | EluciDATA Lab"/>
-    <meta property="og:url" content="/Blog/first-post.html" />
+        <link rel="canonical" href="/Time Series Preprocessing/2022-05-06-handling-missing-data.html">
+    <meta property="og:title" content="Handling Missing Data | EluciDATA Lab"/>
+    <meta property="og:url" content="/Time Series Preprocessing/2022-05-06-handling-missing-data.html" />
     <meta property="og:description" content="" />
     <meta property="og:site_name" content="EluciDATA Lab" />
     <meta property="og:article:author" content="ELUCIDATALAB" />
-        <meta property="og:article:published_time" content="2022-03-20T12:13:00+01:00" />
-    <meta name="twitter:title" content="Welcome | EluciDATA Lab">
+        <meta property="og:article:published_time" content="2022-05-06T00:00:00+02:00" />
+    <meta name="twitter:title" content="Handling Missing Data | EluciDATA Lab">
     <meta name="twitter:description" content="">
-            <meta property="og:image" content="/theme/img/logo_icon_background.png" />
-            <meta name="twitter:image" content="/theme/img/logo_icon_background.png"/>
+        <meta property="og:image" content="/../Time Series Preprocessing/img/SK_specific/TSP_figure11.png" />
+        <meta name="twitter:image" content="/../Time Series Preprocessing/img/SK_specific/TSP_figure11.png" >
 
 
-        <title>    Welcome  | EluciDATA Lab
+        <title>    Handling Missing Data  | EluciDATA Lab
 </title>
 
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -130,10 +130,10 @@ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
 <div id="post-container" class="container post index">
     <article>
         <header class="pop-over">
-            <h1>Welcome</h1>
+            <h1>Handling Missing Data</h1>
             <div class="row justify-content-between no-margin">
-                <h4 class="article-category">Category > <a class="article-category-link" href="/archives.html">Blog</a></h4>
-                <span class="article-date">Sun 20 March 2022</span>
+                <h4 class="article-category">Category > <a class="article-category-link" href="/archives.html">Time Series Preprocessing</a></h4>
+                <span class="article-date">Fri 06 May 2022</span>
             </div>
             <div class="meta meta-tag no-margin no-border">
                 <div>
@@ -144,13 +144,13 @@ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
         <div class="share-post-intro mr-2">Share This Post :</div>
         <div class="social-share-btns-container">
             <div class="social-share-btns">
-                <a class="share-btn share-btn-twitter" href="https://twitter.com/intent/tweet?text=Welcome&url=https%3A//elucidatalab.github.io/Blog/first-post.html" rel="nofollow" target="_blank">
+                <a class="share-btn share-btn-twitter" href="https://twitter.com/intent/tweet?text=Handling%20Missing%20Data&url=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2022-05-06-handling-missing-data.html" rel="nofollow" target="_blank">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a class="share-btn share-btn-facebook" href="http://www.facebook.com/sharer/sharer.php?u=https%3A//elucidatalab.github.io/Blog/first-post.html" rel="nofollow" target="_blank">
+                <a class="share-btn share-btn-facebook" href="http://www.facebook.com/sharer/sharer.php?u=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2022-05-06-handling-missing-data.html" rel="nofollow" target="_blank">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a class="share-btn share-btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//elucidatalab.github.io/Blog/first-post.html&title=Welcome&summary=Category%3A%20Blog%20%0AWelcome%20to%20the%20official%20ElcuiDATA%20Lab%20bloging%20and%20starterkit%20platfrom.%20Here%20you%20will%20hopefully%20find%20some%20latest%20machine%20learning%20content%20and%20tutorials.%20Enjoy%21&source=https%3A//elucidatalab.github.io/Blog/first-post.html" rel="nofollow" target="_blank">
+                <a class="share-btn share-btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2022-05-06-handling-missing-data.html&title=Handling%20Missing%20Data&summary=Handling%20Missing%20Data%C2%B6%0A%0A%0A%0A%0AIn%20this%20video%2C%20we%20will%20finally%20use%20the%20insights%20from%20before%20and%20impute%20missing%20values%20in%20the%20dataset.%0AReal-world%20industrial%20datasets%20often%20suffer%20from%20missing%20data%20due%20to%20several%20reasons.%20Missing%20data%20occurs%20often%20due%20to%20sensor%20malfunctioning%20or%20communication%20errors.%20In%20addition%2C%20if%20we%20have%20removed%20%E2%80%A6&source=https%3A//elucidatalab.github.io/Time%20Series%20Preprocessing/2022-05-06-handling-missing-data.html" rel="nofollow" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
@@ -161,14 +161,41 @@ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
         </header>
         <div class="article_content">
             <!--            -->
-            <p>Category: Blog </p>
-<p>Welcome to the official ElcuiDATA Lab bloging and starterkit platfrom. Here you will hopefully find some latest machine learning content and tutorials. Enjoy!</p>
+            <h2 id="handling-missing-data">Handling Missing Data<a class="headerlink" href="#handling-missing-data" title="Permanent link">&para;</a></h2>
+<p><br/></p>
+<p align="center"><iframe src="https://player.vimeo.com/video/596617563?h=1e5b81dc2c&color=e700ef" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<br/></p>
+<p><br/></p>
+<p>In this video, we will finally use the insights from before and impute missing values in the dataset.</p>
+<p>Real-world industrial datasets often suffer from missing data due to several reasons. Missing data occurs often due to sensor malfunctioning or communication errors. In addition, if we have removed outliers as shown in the previous video, these will also show up as missing values in the data.</p>
+<p>In both cases, we can fill the missing values using so-called data imputation techniques. Multiple techniques exist and which one to choose depends on the data characteristics. The choice depends on the presence of trends, the length of the missing period, etc. In this video, we will present 3 different imputation techniques, namely
+* Linear interpolation
+* Fleet-based interpolation, and
+* Pattern-based imputation</p>
+<p>To evaluate the efficiency of the different methods, we will create a set of synthetic missing data events with varying durations. The main advantage of this approach is that it allows us to compare the outcome of the imputation procedure with the real, observed values.</p>
+<p>We start with the linear interpolation of values and interpolation based on the fleet median. Linear interpolation is a simple technique that is frequently used in case a small number of points are missing within a particular period.  It simply connects the last point before and the first point after the missing data episode with a straight line.</p>
+<p>Fleet median, on the other hand, exploits the fleet-based aspect of our asset for imputing periods of missing data. For the dataset under investigation, we know the assets are co-located and are, therefore, exposed to similar conditions like for example the wind direction and speed. Hence, we can compute the median value of the wind speed for the turbines that do have data and use those values as an estimation of the missing values.</p>
+<p>Linear interpolation is sensitive to the event duration, meaning the longer the missing data event, the less likely it is that a linear interpolation will follow the real values. Fleet median interpolation may result in unexpected results if there are too few assets in the fleet or too few assets with non-missing values at the time.</p>
+<p><center><img src="./img/SK_specific/TSP_figure14.png" width="400" class="center" /></center></p>
+<p>On top of that, as indicated before, the latter method is dependent on the different assets being co-located and exposed to similar conditions, which is a condition that might be too stringent in particular contexts.</p>
+<p>In the interactive starter kit, we can analyse how both methods perform for missing data events of different durations. We can also change the number of turbines that are considered for the fleet median interpolation and see how that affects the accuracy of the prediction. In our dataset, there are 4 turbines available, so you can choose between 1 and 3 turbines to use for the fleet median interpolation.</p>
+<p>The red trace corresponds to actual observed values. This means that the closer the blue or the green line, representing the linear and fleet mean interpolation respectively, are to this red line, the better the interpolation is.</p>
+<p>In order to understand the pros and cons of the methods, we perform some experiments: First, we decrease the duration of the missing data from 30 to 10 minutes, corresponding to one missing data point in the signal.</p>
+<p>We see that the linear interpolation approximates the original signal fairly well. When increasing the duration of missing data to 100, on the other hand, the interpolation deviates significantly from the original signal. Thus, the longer the period of missing data points, the worse the linear interpolation. Similarly, we can change the number of turbines for calculating the fleet median to a lower number. With only one turbine taken into account, also here the quality of the imputation drops but still returns a better approximation than the linear interpolation, especially for longer durations of missing data. Note, that this is only the case because we know that the wind turbines are co-located. In the starterkit, you can further inspect how the two methods are performing in different scenarios.</p>
+<p>When linear interpolation or fleet-based data imputation techniques do not lead to a sufficiently good approximation to the original signal, we can still use pattern-based imputation. In the following we illustrate this method on two attributes, namely the time series for temperature and wind speed.</p>
+<p><center><img src="./img/SK_specific/TSP_figure15.png" width="400" class="center" /></center></p>
+<p>Pattern-based interpolation performs well on signals that follow a predictable pattern, as is the case for signals that show a strong seasonal modulation. We can appreciate this by comparing the interpolation of the temperature and wind speed signals.</p>
+<p>The former, as we have seen before, follows a daily pattern, ergo night vs. day and a seasonal pattern hence, winter vs. summer and therewith also shows a high-quality pattern-based interpolation. The latter, - the wind speed - however, has a weaker seasonal modulation reflected in a less accurate interpolation. As the basis for this pattern-based interpolation, we can use seasonal ARIMA - an extension of the ARIMA model - for forecasting seasonal time-series data. More specifically, in our case we can use seasonal ARIMA for forecasting the evolution of the temperature based on the data coming from a single asset.</p>
+<p>Note how varying the duration of the missing data event affects the interpolation quality. You can also anticipate the start of the (synthetic) missing data event and see if that affects the prediction. Here, we first change the start of the missing data by 36 hours. The prediction fails to mimic the original values in the beginning. Indeed, this type of interpolation might be sensitive to the starting point for the forecasting. Here we used one year of data prior to the missing data event for the training of the ARIMA model. Using a longer period - including multiple seasonal patterns-
+nonetheless will improve the forecasting and avoid the aforementioned shortcomings. Furthermore, we analyse how strong the duration of missing data influences the quality of the interpolation. When increasing this duration to 24 hours, or put differently, when aiming to interpolate the data for a whole day, the pattern-based interpolation still returns fairly satisfactory results for the temperature values but does not predict the wind speed with sufficiently high quality.</p>
+<p>Therefore, keep in mind that it is important to understand the data before choosing an interpolation method.</p>
         </div>
         <hr/>
         <aside>
         <nav>
         <ul class="articles-timeline">
-            <li class="next-article"><a href="/Time Series Preprocessing/2022-05-02-introduction.html" title="Next: Introduction">Introduction</a> »</li>
+            <li class="previous-article">« <a href="/Remaining Useful Life Prediction/2022-05-05-data-preprocessing.html" title="Previous: Data Preprocessing">Data Preprocessing</a></li>
+            <li class="next-article"><a href="/Resource demand Forecasting/2022-05-06-data-science-theory-advanced-regression-models.html" title="Next: Data Science Theory - Advanced Regression Models">Data Science Theory - Advanced Regression Models</a> »</li>
         </ul>
         </nav>
         </aside>
