@@ -5,69 +5,69 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2022-09-21T09:11:25-00:00</lastmod>
+<lastmod>2022-09-28T15:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2022-09-21T09:11:25-00:00</lastmod>
+<lastmod>2022-09-28T15:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/search.html</loc>
-<lastmod>2022-09-21T09:11:25-00:00</lastmod>
+<lastmod>2022-09-28T15:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/404.html</loc>
-<lastmod>2022-09-21T09:11:25-00:00</lastmod>
+<lastmod>2022-09-28T15:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/about.html</loc>
-<lastmod>2022-09-21T09:11:25-00:00</lastmod>
+<lastmod>2022-09-28T15:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/skits.html</loc>
-<lastmod>2022-09-21T09:11:25-00:00</lastmod>
+<lastmod>2022-09-28T15:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/home.html</loc>
-<lastmod>2022-09-21T09:11:25-00:00</lastmod>
+<lastmod>2022-09-28T15:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/{slug}.html</loc>
-<lastmod>2022-09-21T09:11:25-00:00</lastmod>
+<lastmod>2022-09-28T15:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/getting_started_jupyter_environment.html</loc>
-<lastmod>2022-09-21T09:11:25-00:00</lastmod>
+<lastmod>2022-09-28T15:59:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-08-key-take-away-messages.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-08-key-take-away-messages.html</loc>
 <lastmod>2022-05-08T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -81,7 +81,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-07-data-modelling-and-forecasting.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-07-data-modelling-and-forecasting.html</loc>
 <lastmod>2022-05-07T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -109,7 +109,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-06-data-science-theory-advanced-regression-models.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-06-data-science-theory-advanced-regression-models.html</loc>
 <lastmod>2022-05-06T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -130,13 +130,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Advanced Data Visualization/2022-05-05-outlier-detection.html</loc>
-<lastmod>2022-05-05T00:00:00+02:00</lastmod>
-<changefreq>hourly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>/Time Series Preprocessing/2022-05-05-outlier-detection.html</loc>
 <lastmod>2022-05-05T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
@@ -144,7 +137,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-05-statistical-data-exploration-and-feature-engineering.html</loc>
+<loc>/Advanced Data Visualization/2022-05-05-outlier-detection.html</loc>
+<lastmod>2022-05-05T00:00:00+02:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/Resource Demand Forecasting/2022-05-05-statistical-data-exploration-and-feature-engineering.html</loc>
 <lastmod>2022-05-05T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -172,21 +172,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-04-visual-data-exploration.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-04-visual-data-exploration.html</loc>
 <lastmod>2022-05-04T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-03-data-preprocessing.html</loc>
-<lastmod>2022-05-03T00:00:00+02:00</lastmod>
-<changefreq>hourly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/Remaining Useful Life Prediction/2022-05-03-data-understanding.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-03-data-preprocessing.html</loc>
 <lastmod>2022-05-03T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -200,6 +193,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/Remaining Useful Life Prediction/2022-05-03-data-understanding.html</loc>
+<lastmod>2022-05-03T00:00:00+02:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/Advanced Data Visualization/2022-05-03-data-understanding-and-preprocessing.html</loc>
 <lastmod>2022-05-03T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
@@ -207,7 +207,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Advanced Data Visualization/2022-05-02-introduction.html</loc>
+<loc>/Time Series Preprocessing/2022-05-02-introduction.html</loc>
 <lastmod>2022-05-02T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -221,14 +221,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Time Series Preprocessing/2022-05-02-introduction.html</loc>
+<loc>/Advanced Data Visualization/2022-05-02-introduction.html</loc>
 <lastmod>2022-05-02T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-02-introduction.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-02-introduction.html</loc>
 <lastmod>2022-05-02T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -298,7 +298,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-08-key-take-away-messages.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-08-key-take-away-messages.html</loc>
 <lastmod>2022-05-08T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -319,7 +319,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-08-key-take-away-messages.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-08-key-take-away-messages.html</loc>
 <lastmod>2022-05-08T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -340,7 +340,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-08-key-take-away-messages.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-08-key-take-away-messages.html</loc>
 <lastmod>2022-05-08T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -361,21 +361,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-03-data-preprocessing.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-03-data-preprocessing.html</loc>
 <lastmod>2022-05-03T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Time Series Preprocessing/2022-05-05-outlier-detection.html</loc>
+<loc>/Advanced Data Visualization/2022-05-05-outlier-detection.html</loc>
 <lastmod>2022-05-05T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Advanced Data Visualization/2022-05-05-outlier-detection.html</loc>
+<loc>/Time Series Preprocessing/2022-05-05-outlier-detection.html</loc>
 <lastmod>2022-05-05T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -389,13 +389,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Time Series Preprocessing/2022-05-03-data-understanding.html</loc>
-<lastmod>2022-05-03T00:00:00+02:00</lastmod>
-<changefreq>hourly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>/Remaining Useful Life Prediction/2022-05-03-data-understanding.html</loc>
 <lastmod>2022-05-03T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
@@ -403,21 +396,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/Time Series Preprocessing/2022-05-03-data-understanding.html</loc>
+<lastmod>2022-05-03T00:00:00+02:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/Remaining Useful Life Prediction/2022-05-02-introduction.html</loc>
-<lastmod>2022-05-02T00:00:00+02:00</lastmod>
-<changefreq>hourly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/Time Series Preprocessing/2022-05-02-introduction.html</loc>
-<lastmod>2022-05-02T00:00:00+02:00</lastmod>
-<changefreq>hourly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/Resource demand Forecasting/2022-05-02-introduction.html</loc>
 <lastmod>2022-05-02T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -431,14 +417,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Time Series Preprocessing/2022-05-02-introduction.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-02-introduction.html</loc>
 <lastmod>2022-05-02T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Resource demand Forecasting/2022-05-02-introduction.html</loc>
+<loc>/Time Series Preprocessing/2022-05-02-introduction.html</loc>
 <lastmod>2022-05-02T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -452,28 +438,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/Remaining Useful Life Prediction/2022-05-02-introduction.html</loc>
-<lastmod>2022-05-02T00:00:00+02:00</lastmod>
-<changefreq>hourly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/Resource demand Forecasting/2022-05-02-introduction.html</loc>
-<lastmod>2022-05-02T00:00:00+02:00</lastmod>
-<changefreq>hourly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/Advanced Data Visualization/2022-05-02-introduction.html</loc>
-<lastmod>2022-05-02T00:00:00+02:00</lastmod>
-<changefreq>hourly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/Remaining Useful Life Prediction/2022-05-02-introduction.html</loc>
+<loc>/Resource Demand Forecasting/2022-05-02-introduction.html</loc>
 <lastmod>2022-05-02T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
@@ -481,6 +446,41 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/Time Series Preprocessing/2022-05-02-introduction.html</loc>
+<lastmod>2022-05-02T00:00:00+02:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/Remaining Useful Life Prediction/2022-05-02-introduction.html</loc>
+<lastmod>2022-05-02T00:00:00+02:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/Resource Demand Forecasting/2022-05-02-introduction.html</loc>
+<lastmod>2022-05-02T00:00:00+02:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/Time Series Preprocessing/2022-05-02-introduction.html</loc>
+<lastmod>2022-05-02T00:00:00+02:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/Remaining Useful Life Prediction/2022-05-02-introduction.html</loc>
+<lastmod>2022-05-02T00:00:00+02:00</lastmod>
+<changefreq>hourly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/Advanced Data Visualization/2022-05-02-introduction.html</loc>
 <lastmod>2022-05-02T00:00:00+02:00</lastmod>
 <changefreq>hourly</changefreq>
 <priority>0.5</priority>
