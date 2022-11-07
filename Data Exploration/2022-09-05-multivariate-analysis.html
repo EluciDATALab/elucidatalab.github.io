@@ -26,8 +26,8 @@
         <meta property="og:article:published_time" content="2022-09-05T00:00:00+02:00" />
     <meta name="twitter:title" content="Multivariate Analysis | EluciDATA Lab">
     <meta name="twitter:description" content="">
-        <meta property="og:image" content="/../Data exploration/img/SK_specific/DE_figure31_multivariate.png" />
-        <meta name="twitter:image" content="/../Data exploration/img/SK_specific/DE_figure31_multivariate.png" >
+        <meta property="og:image" content="/../Data Exploration/img/SK_specific/DE_figure31_multivariate.png" />
+        <meta name="twitter:image" content="/../Data Exploration/img/SK_specific/DE_figure31_multivariate.png" >
 
 
         <title>    Multivariate Analysis  | EluciDATA Lab
@@ -150,7 +150,7 @@ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
                 <a class="share-btn share-btn-facebook" href="http://www.facebook.com/sharer/sharer.php?u=https%3A//elucidatalab.github.io/Data%20Exploration/2022-09-05-multivariate-analysis.html" rel="nofollow" target="_blank">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a class="share-btn share-btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//elucidatalab.github.io/Data%20Exploration/2022-09-05-multivariate-analysis.html&title=Multivariate%20Analysis&summary=Multivariate%20Analysis%C2%B6%0A%0A%0A%0AWelcome%20to%20the%20fourth%20tutorial%20video%20on%20data%20exploration.%20In%20the%20former%20videos%2C%20we%20concentrated%20on%20uni-%20and%20bivariate%20analysis.%20In%20this%20video%2C%20we%20conclude%20the%20exploration%20of%20the%20bike-sharing%20dataset%20with%20a%20more%20sophisticated%20multivariate%20analysis%2C%20complementing%20the%20analyses%20presented%20before.%0AAt%20the%20end%20of%20the%20last%20%E2%80%A6&source=https%3A//elucidatalab.github.io/Data%20Exploration/2022-09-05-multivariate-analysis.html" rel="nofollow" target="_blank">
+                <a class="share-btn share-btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//elucidatalab.github.io/Data%20Exploration/2022-09-05-multivariate-analysis.html&title=Multivariate%20Analysis&summary=Multivariate%20Analysis%C2%B6%0A%0A%0A%0A%0AWelcome%20to%20the%20fourth%20tutorial%20video%20on%20data%20exploration.%20In%20the%20former%20videos%2C%20we%20concentrated%20on%20uni-%20and%20bivariate%20analysis.%20In%20this%20video%2C%20we%20conclude%20the%20exploration%20of%20the%20bike-sharing%20dataset%20with%20a%20more%20sophisticated%20multivariate%20analysis%2C%20complementing%20the%20analyses%20presented%20before.%0AAt%20the%20end%20of%20the%20last%20%E2%80%A6&source=https%3A//elucidatalab.github.io/Data%20Exploration/2022-09-05-multivariate-analysis.html" rel="nofollow" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
@@ -163,9 +163,10 @@ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
             <!--            -->
             <h2 id="multivariate-analysis">Multivariate Analysis<a class="headerlink" href="#multivariate-analysis" title="Permanent link">&para;</a></h2>
 <p><br/></p>
-<div align="center"><iframe width="600" height="336" src="https://vimeo.com/612904790/6427d908ea" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-<p><br/></p>
-<p>Welcome to the fourth tutorial video on data exploration. In the former videos, we concentrated on uni- and bivariate analysis. In this video, we conclude the exploration of the bike-sharing dataset with a more sophisticated multivariate analysis, complementing the analyses presented before.</p>
+<p align="center"><iframe src="https://player.vimeo.com/video/612904790?h=6427d908ea&color=e700ef" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<br/></p>
+<p><br/>
+Welcome to the fourth tutorial video on data exploration. In the former videos, we concentrated on uni- and bivariate analysis. In this video, we conclude the exploration of the bike-sharing dataset with a more sophisticated multivariate analysis, complementing the analyses presented before.</p>
 <p>At the end of the last video, we validated that the elevation plays a major role in explaining why some stations are unbalanced with respect to arrivals and departures. In other terms, the elevation embodies the 'cost' that a user has to face when moving between stations that are at different levels. This aspect, that is the cost of reaching nodes within a network, is a general problem that is faced in network analysis for identifying the best routing. For this reason, we continue the previous analysis by focusing on the 'cost' of reaching stations without the need of using the elevation explicitly. By making this problem more generic, the proposed analysis can be applied also to other networks where there are 'costs' for traveling between nodes which influence routing. We redefine hence the previous problem setting as follows: each bike station represents a node of a network and each node is connected through an edge to all other nodes of the network. The single edges are bidirectional, and each direction has an associated cost. In our case, the cost is represented by the time required for traveling between two stations. We assume that given the same distance, the time required for moving between two stations is determined by the difference in elevation, hence, biking uphill requires more time than biking downhill. As a first step to perform this analysis, we compute the trip duration among unbalanced stations. An excerpt of these trip durations is provided in the table on the right.</p>
 <p><center><img src="../Data exploration/img/SK_specific/DE_figure30.png" width="700" class="center" /></center></p>
 <p>The table shows the cost hence, the time it takes to reach a given node when departing from another one and vice versa. In the example, we see that the cost to go from Cal Anderson Park, 11th Avenue &amp; Pine Street to E Harrison Street &amp; Broadway Avenue East is less expensive than taking the return way with a time difference of less than a minute. Hence, it is slightly faster to go in one direction than in the opposite direction.</p>
