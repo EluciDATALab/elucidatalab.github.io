@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+            <meta name="author" content="EluciDATA Lab" />
+
+
+            <meta name="description" content="" />
+
+                <meta property="og:type" content="article" />
+            <meta name="twitter:card" content="summary"/>
+
+        <meta name="keywords" content=", Feature Engineering, "/>
+
+        <link rel="canonical" href="/Feature Engineering/2023-04-01-introduction.html">
+    <meta property="og:title" content="Introduction | EluciDATA Lab"/>
+    <meta property="og:url" content="/Feature Engineering/2023-04-01-introduction.html" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="EluciDATA Lab" />
+    <meta property="og:article:author" content="EluciDATA Lab" />
+        <meta property="og:article:published_time" content="2023-04-01T00:00:00+02:00" />
+    <meta name="twitter:title" content="Introduction | EluciDATA Lab">
+    <meta name="twitter:description" content="">
+        <meta property="og:image" content="/../Feature Engineering/img/SK_specific/FE_figure1.png" />
+        <meta name="twitter:image" content="/../Feature Engineering/img/SK_specific/FE_figure1.png" >
+
+
+        <title>    Introduction  | EluciDATA Lab
+</title>
+
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+            <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+            <link rel="stylesheet" type="text/css" href="/theme/css/ipynb.css" media="screen">
+
+            <style>
+                #progressBar::-webkit-progress-value {
+                    background-color: #24292e;
+                }
+                #progressBar::-moz-progress-bar {
+                    background-color: #24292e;
+                }
+            </style>
+
+        <link href="/theme/libs/prism.css" rel="stylesheet" />
+<script type="text/x-mathjax-config">
+
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+  linebreaks: { automatic: true, width: "container" }
+}
+});
+
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+        <link rel="shortcut icon" href="/theme/img/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/theme/img/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/img/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/img/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/img/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/img/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/img/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/img/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/img/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/img/apple-touch-icon-152x152.png" type="image/png" />
+    </head>
+    <body>
+<progress id="progressBar" max="19827" class="flat">
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+</progress>        <div class="banner-wrapper row" style="background-color: #24292e;">
+            <div class="banner">
+                <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light container">
+                    <div class="container navbar-title">
+                        <a href="/"><img id="banner-logo" src="/theme/img/profile_photo_new_branding.png" style="height: 40px; margin: 6px 0;"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" style="margin-bottom: 6.5px;margin-top: 6.5px">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/home.html">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/blog.html">Blog</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/skits.html">Starter Kits</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/about.html">About</a>
+                        </li>
+                    </ul>
+                    <!--<ul class="navbar-nav">
+                        <li id="second-item" class="nav-item">
+                            <a class="nav-link rem_08" href="/archives.html">Archive</a>
+                        </li>
+                     </ul>-->
+                    <ul class="navbar-nav">
+                    <form id="search-form" class="form-inline my-2 my-lg-0 justify-content-center" action="/search.html">
+                        <div id="third-item" class="search-box-div row" style="margin-top:-3.5px;">
+                            <input id="tipue_search_input" class="form-control mr-md-2 rem_08 col-9" type="text" name="q" pattern=".{3,}" title="At least 3 characters" required="" aria-label="Search"/>
+                            <button id="search-btn" class="btn btn-search btn-outline-success btn-circle rem_08 col-3" type="submit" for="tipue_search_input" style="margin-left: 3px;">Search</button>
+                        </div>
+                    </form>
+                    </ul>
+                </div>
+                </nav>
+            </div>
+        </div>
+        <div id="wrap">
+<div id="post-container" class="container post index">
+    <article>
+        <header class="pop-over">
+            <h1>Introduction</h1>
+            <div class="row justify-content-between no-margin">
+                <h4 class="article-category">Category > <a class="article-category-link" href="/archives.html">Feature Engineering</a></h4>
+                <span class="article-date">Sat 01 April 2023</span>
+            </div>
+            <div class="meta meta-tag no-margin no-border">
+                <div>
+                </div>
+            </div>
+            <section>
+    <div class="row justify-content-end mt-3" style="align-items: center">
+        <div class="share-post-intro mr-2">Share This Post :</div>
+        <div class="social-share-btns-container">
+            <div class="social-share-btns">
+                <a class="share-btn share-btn-twitter" href="https://twitter.com/intent/tweet?text=Introduction&url=https%3A//elucidatalab.github.io/Feature%20Engineering/2023-04-01-introduction.html" rel="nofollow" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="share-btn share-btn-facebook" href="http://www.facebook.com/sharer/sharer.php?u=https%3A//elucidatalab.github.io/Feature%20Engineering/2023-04-01-introduction.html" rel="nofollow" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="share-btn share-btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//elucidatalab.github.io/Feature%20Engineering/2023-04-01-introduction.html&title=Introduction&summary=Introduction%C2%B6%0A%0ADescription%C2%B6%0AMost%20data%20mining%20and%20machine%20learning%20algorithms%20do%20not%20work%20well%20if%20you%20just%20feed%20them%20your%20raw%20data%3A%20such%20data%20often%20contains%20noise%20and%20the%20most%20relevant%20distinguishing%20information%20is%20often%20implicit.%20For%20example%2C%20raw%20sensor%20data%20just%20contains%20a%20timestamp%20and%20a%20corresponding%20value%2C%20while%20interesting%20%E2%80%A6&source=https%3A//elucidatalab.github.io/Feature%20Engineering/2023-04-01-introduction.html" rel="nofollow" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </header>
+        <div class="article_content">
+            <!--            <p id="list-of-translations">
+This post is also available in:
+    <a href="/Advanced Data Visualization/2022-05-02-introduction.html">en</a>,     <a href="/Time Series Preprocessing/2022-05-02-introduction.html">en</a>,     <a href="/Resource Demand Forecasting/2022-05-02-introduction.html">en</a>,     <a href="/Remaining Useful Life Prediction/2022-05-02-introduction.html">en</a> and    <a href="/Data Exploration/2022-09-02-introduction.html">en</a></p>
+-->
+            <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<!-- <br/>
+<p align="center"><iframe src="https://player.vimeo.com/video/612907452?h=1c07951c12&color=e700ef" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<br/></p>
+<br/> -->
+<h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
+<p>Most data mining and machine learning algorithms do not work well if you just feed them your raw data: such data often contains noise and the most relevant distinguishing information is often implicit. For example, raw sensor data just contains a timestamp and a corresponding value, while interesting aspects of it might be the trends contained within or the number of times a threshold is exceeded.</p>
+<p>Feature engineering is the process of extracting from the raw data the most relevant distinguishing characteristics that will be presented to the algorithm during modeling. It is a way of deriving new information from the existing data, so that its characteristics are more explicitly represented. The resulting features are eventually feed to the AI/ML algorithm of the model. In practice, the feature engineering step is achieved by the selection of the most appropriate parameters, or the composition of new features by manipulation, transformation and combination of the raw data.</p>
+<p>Feature engineering is one of the most important and creative steps in the data science workflow. However, there is no clearly-defined formal process for engineering features and, consequently, this requires a lot of creativity, a good understanding of the domain and of the available data, some trial-and-error, etc. It is also desirable to have upfront an idea of the modeling and analysis task for which you want to use the resulting features, as this might help you to identify relevant features.</p>
+<h3 id="business-goal">Business goal<a class="headerlink" href="#business-goal" title="Permanent link">&para;</a></h3>
+<p>The overall goal of this Starter Kit is to present some <strong>advanced feature engineering steps</strong> related to <strong>feature construction</strong> and <strong>extraction</strong>. By keeping in mind <strong>what is your business question</strong> and <strong>what is the corresponding data science task</strong>, you will be able to derive <strong>valuable features</strong> that can be used in the next stage of your analysis.</p>
+<h3 id="application-context">Application context<a class="headerlink" href="#application-context" title="Permanent link">&para;</a></h3>
+<p>Feature engineering is one of the steps in the data science workflow with the most decisive impact on the accuracy of the model you want to develop. It is the final step before actually training the model and it defines how the input data will be fed to the model.</p>
+<h3 id="starter-kit-outline">Starter Kit outline<a class="headerlink" href="#starter-kit-outline" title="Permanent link">&para;</a></h3>
+<p>In this Starter Kit we use a dataset from the Regional Rail System of Pennsylvania. Before starting the feature extraction <em>per se</em>, we will first apply some basic preprocessing to the dataset and have a high-level overview of the data. We will then derive several interesting features from the dataset that can be used to characterise train rides and delays.</p>
+        </div>
+        <hr/>
+        <aside>
+        <nav>
+        <ul class="articles-timeline">
+            <li class="previous-article">« <a href="/Blog/first-post.html" title="Previous: Welcome">Welcome</a></li>
+            <li class="next-article"><a href="/Advanced Data Visualization/2022-05-02-introduction.html" title="Next: Introduction">Introduction</a> »</li>
+        </ul>
+        </nav>
+        </aside>
+        <hr/>
+    </article>
+</div>
+        </div>
+<footer class="footer">
+   <div class="container bottom_border">
+      <div class="row">
+         <div class="col">
+            <h5 class="headin5_amrc col_white_amrc pt2">ABOUT EluciDATA Lab</h5>
+            <!--headin5_amrc-->
+            <p class="mb10"><img id="profile_img" align="left" src="/theme/img/PoweredBySirris_negatif.png"></p>
+            <p><i class="fa fa-envelope mr-2"></i>elucidatalab@sirris.be</p>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <ul class="foote_bottom_ul_amrc">
+         <li><a href="/">HOME</a></li>
+         <li><a href="about.html">ABOUT</a></li>
+         <li><a href="archives.html">ARCHIVE</a></li>
+      </ul>
+      <!--foote_bottom_ul_amrc ends here-->
+      <p class="text-center">&copy Sirris <a href="https://elucidata.be/gebruikersovereenkomst" target="_blank">User Agreement</a> <a href="https://elucidata.be/privacy-policy" target="_blank">Privacy policy</a><br>EluciDATA Lab -The Data and AI Competence Lab of Sirris</p>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="row" align="center">
+                  <div class="footer-icon"><a href="https://www.linkedin.com/company/sirris/"><i class="fab fa-linkedin-in"></i></a></div>
+                  <div class="footer-icon"><a href="https://github.com/EluciDATALab/elucidatalab.starterkits"><i class="fab fa-github"></i></a></div>
+              </div>
+          </div>
+      </div>
+
+      <!--social_footer_ul ends here-->
+   </div>
+</footer>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script src="/theme/libs/prism.js"></script>
+        <script src="/theme/libs/Countable.js"></script>
+
+        <script>
+            Prism.plugins.NormalizeWhitespace.setDefaults({
+                'remove-trailing': true,
+                'remove-indent': true,
+                'left-trim': true,
+                'right-trim': true,
+                /*'break-lines': 80,
+                'indent': 2,
+                'remove-initial-line-feed': false,
+                'tabs-to-spaces': 4,
+                'spaces-to-tabs': 4*/
+            });
+        </script>
+
+
+        <script type="text/javascript" src="/theme/js/custom.js"></script>
+            <script>
+                function validateForm(query)
+                {
+                    return (query.length > 0);
+                }
+            </script>
+    </body>
+</html>
