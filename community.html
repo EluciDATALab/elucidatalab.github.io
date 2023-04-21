@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+            <meta name="author" content="EluciDATA Lab" />
+
+
+            <meta name="description" content="Data Science and AI" />
+
+                <meta property="og:type" content="article" />
+            <meta name="twitter:card" content="summary"/>
+
+    <link rel="canonical" href="/category/">
+    <meta property="og:title" content=" | EluciDATA Lab"/>
+    <meta name="twitter:title" content=" | EluciDATA Lab"/>
+    <meta property="og:url" content="/category/" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:description" content=""/>
+    <meta property="og:site_name" content="EluciDATA Lab" />
+    <meta property="og:article:author" content="EluciDATA Lab" />
+        <meta property="og:image" content="//theme/img/logo_icon_background.png" />
+        <meta name="twitter:image" content="//theme/img/logo_icon_background.png"/>
+
+        <title>    EluciDATA Lab
+</title>
+
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+            <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+            <link rel="stylesheet" type="text/css" href="/theme/css/ipynb.css" media="screen">
+
+            <style>
+                #progressBar::-webkit-progress-value {
+                    background-color: #24292e;
+                }
+                #progressBar::-moz-progress-bar {
+                    background-color: #24292e;
+                }
+            </style>
+
+        <link href="/theme/libs/prism.css" rel="stylesheet" />
+<script type="text/x-mathjax-config">
+
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+  linebreaks: { automatic: true, width: "container" }
+}
+});
+
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+        <link rel="shortcut icon" href="/theme/img/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/theme/img/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/img/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/img/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/img/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/img/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/img/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/img/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/img/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/img/apple-touch-icon-152x152.png" type="image/png" />
+    </head>
+    <body>
+<progress id="progressBar" max="19827" class="flat">
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+</progress>        <div class="banner-wrapper row" style="background-color: #24292e;">
+            <div class="banner">
+                <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light container">
+                    <div class="container navbar-title">
+                        <a href="/"><img id="banner-logo" src="/theme/img/profile_photo_new_branding.png" style="height: 40px; margin: 6px 0;"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" style="margin-bottom: 6.5px;margin-top: 6.5px">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/home.html">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/blog.html">Blog</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/skits.html">Starter Kits</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/community.html">Community</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link rem_08" href="/about.html">About</a>
+                        </li>
+                    </ul>
+                    <!--<ul class="navbar-nav">
+                        <li id="second-item" class="nav-item">
+                            <a class="nav-link rem_08" href="/archives.html">Archive</a>
+                        </li>
+                     </ul>-->
+                    <ul class="navbar-nav">
+                    <form id="search-form" class="form-inline my-2 my-lg-0 justify-content-center" action="/search.html">
+                        <div id="third-item" class="search-box-div row" style="margin-top:-3.5px;">
+                            <input id="tipue_search_input" class="form-control mr-md-2 rem_08 col-9" type="text" name="q" pattern=".{3,}" title="At least 3 characters" required="" aria-label="Search"/>
+                            <button id="search-btn" class="btn btn-search btn-outline-success btn-circle rem_08 col-3" type="submit" for="tipue_search_input" style="margin-left: 3px;">Search</button>
+                        </div>
+                    </form>
+                    </ul>
+                </div>
+                </nav>
+            </div>
+        </div>
+        <div id="wrap">
+    <div class="row mb-5 ml-0 mr-0">
+        <div class="justify-content-end col-lg-3 col-md-12 index-left-col tr-effect">
+            <div class="index-scroll-container">
+                <div class="profile row no-margin pop-over">
+                    <div class="index-author tr-effect">
+						<!--
+                        <div class="mr-4">
+                            <img src="theme/img/PoweredBySirris_negatif.png" class="index-author-photo" alt="Elucidata lab">
+                        </div>
+						-->
+                        <div class="name-subtitle">
+                            <div class="col no-padding">
+                                <h3 class="author__name">EluciDATA Lab</h3>
+                            </div>
+                            <div class="col no-padding">
+                                <p class="author__bio">The Data and AI Competence Lab of Sirris</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts no-link mt-1 tr-effect">
+                        <div class="">
+                            <p><i class="fas fa-map-marker-alt" aria-hidden="true" style="margin-right: 6px;margin-left: 2px;"></i>Belgium</p>
+                            <p><i class="far fa-envelope" aria-hidden="true" style="margin-right: 8px;"></i>elucidatalab@sirris.be</p>
+                        </div>
+                    </div>
+                    <div class="contacts link mt-1 tr-effect">
+                        <div class="">
+                            <p><a href="https://www.linkedin.com/company/sirris/" class="color-inherit" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true" style="margin-right: 8px;"></i> LinkedIn</a></p>
+                            <p><a href="https://github.com/EluciDATALab/elucidatalab.starterkits" class="color-inherit" target="_blank"><i class="fab fa-github" aria-hidden="true" style="margin-right: 5px;"></i> Github</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixme">
+                    <div class="read-next-card row no-margin pop-over" style="background-image: url('/theme/img/index_banner_image.jpg')">
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">— EluciDATA Lab —</small>
+                            <h3 class="read-next-card-header-title">Starter Kits repository</h3>
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"></path></svg>
+        </div>
+                       <div class="read-next-card-footer">
+                            <a href="https://github.com/EluciDATALab/elucidatalab.starterkits" target="_blank">Go to Github →</a>
+                        </div>
+                    </div>
+                    <div class="tagcloud-container row no-margin pop-over">
+                        <p class="title">TAG CLOUD</p>
+                        <ul class="tagcloud">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="post-container" class="index col-lg-9 col-md-12 mt-4 tr-effect">
+            <header class="is-secondary">
+                <div class="container">
+                    <div class="panel-pane">
+                        <div class="field-name-title-field field-type-text">
+                            <h1>EluciDATA Community - A facilitator and network for your AI innovation projects</h1>
+                            <div class="col-xs-12" style="height:25px;"></div>
+                            <img src="theme/img/piqsels.com-id-zbtbn.jpg" class="rounded mx-auto d-block" alt="EluciDATA Community" width="75%">
+                            <div class="col-xs-12" style="height:50px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="row row--cols row--main">
+                <div class="container">
+                    <div class="cols">
+                        <div class="col col--content--left">
+                            <div class="row--main__content">
+                                <div class="panel-pane">
+                                    <div class="ds-coolflex-1col node node-page view-mode-full clearfix">
+                                        <div class="cols">
+                                            <div class="col col--content--full">
+                                                <div class="ds-content ds-content--main">
+                                                    <div class="field-name-body field-type-text-with-summary">
+                                                        <p style="font-size:18px">The EluciDATA Community is initiated&nbsp;by the EluciDATA Lab of Sirris. It gathers a network of companies&nbsp;with an interest in data innovation and AI. It’s main objective is to provide a platform for knowledge transfer, networking and collaboration.&nbsp; &nbsp; &nbsp;</p>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <h2 class="rtecenter">BENEFITS</h2>
+                                                                </div>
+                                                                <div>&nbsp;</div>
+                                                            </div>
+                                                        </div>
+                                                        <p>Actively participating in the&nbsp;<strong>EluciDATA Community</strong>&nbsp;provides you with access to:</p>
+                                                        <div class="table-responsive has-scroll"><table border="0" cellpadding="0" cellspacing="0" style="width:697px" class="js-once-set-responsive-tables-processed">
+                                                            <tbody>
+            	                                                <tr>
+                	                                                <td style="border-color:white; height:90px; width:111px">
+                    	                                                <p><br>
+                    	                                                <img alt="Picture 1.jpg" src="theme/img/elucidata_community_picture1.jpg"></p>
+                	                                                </td>
+                	                                                <td style="border-color:white; height:90px; width:586px">
+                    	                                                <h3><strong><em>Knowledge transfer</em></strong></h3>
+
+                    	                                                <p>Gain insights in emerging technologies through comprehensible industrial use cases on how to successfully apply AI and data science techniques in several sectors</p>
+                	                                                </td>
+            	                                                </tr>
+            	                                                <tr>
+                                                        			<td style="border-color:white; height:30px; width:111px">
+                                                        			 <p><img alt="Picture 3.jpg" src="theme/img/elucidata_community_picture3.jpg"></p>
+                                                        			</td>
+                                                        			<td style="border-color:white; height:30px; width:586px">
+                                                            			<h3><strong><em>Community&nbsp;</em></strong></h3>
+
+                                                            			<p>Preferred access to the two annual Community events:</p>
+
+                                                            			<ul style="list-style-type:circle">
+                                                            				<li><strong>EluciDATA&nbsp;</strong><strong>Brokerage – “Data and AI&nbsp;driven innovation”</strong>: offering the opportunity for networking, learning about or pitching new R&amp;D initiatives, forming new R&amp;D partnerships and following keynote presentations on emerging technology trends</li>
+                                                            				<li><strong><em>EluciDATA Tech Talk</em></strong>: addressing&nbsp;industrial deployment of data innovation and AI, showcasing recent success stories and realised proof-of-concepts on real-world use cases, and exchanging technological know-how and business insights with peers. Topics from the last editions include: "How to fully exploit the data generated by your assets?", Tthe relevance of data security and data privacy in an industrial context", "Are advanced AI methods ready to be applied in industry?".&nbsp;</li>
+                                                            			</ul>
+                                                        			</td>
+                                                        		</tr>
+                                                                <tr>
+                                                        			<td style="border-color:white; height:90px; width:111px">
+                                                        			 <p><img alt="Picture 2.jpg" src="theme/img/elucidata_community_picture2.jpg"></p>
+                                                        			</td>
+                                                        			<td style="border-color:white; height:90px; width:586px">
+                                                            			<h3><strong><em>Network</em></strong></h3>
+
+                                                            			<p>Network with peers and discuss shared challenges, potential solutions and lessons learned&nbsp;</p>
+            		                                                </td>
+                                                        		</tr>
+                                                        		<tr>
+                                                        			<td style="border-color:white; height:90px; width:111px">
+                                                        			 <p><img alt="Picture 4.jpg" src="theme/img/elucidata_community_picture4.jpg"></p>
+                                                        			</td>
+                                                        			<td style="border-color:white; height:90px; width:586px">
+                                                            			<h3><strong><em>Collaboration</em></strong></h3>
+
+                                                            			<p>Be informed about new R&amp;D proposals and take part in their industrial consortia</p>
+                                                        			</td>
+                                                        		</tr>
+                                                        	</tbody>
+                                                        </table>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <h2 class="rtecenter"><strong>MEMBERS OF THE COMMUNITY</strong></h2>
+                                                                </div>
+
+                                                                <div>&nbsp;</div>
+                                                            </div>
+                                                        </div>
+                                                        <p><img alt="EluciDATA Community" src="theme/img/elucidata_community.jpg" width="75%"></p>
+                                                        <p>&nbsp;</p>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <h2 class="rtecenter"><strong>FINANCIAL CONTRIBUTION</strong></h2>
+                                                                </div>
+                                                                <div>&nbsp;</div>
+                                                            </div>
+                                                        </div>
+                                                        <ul>
+                                                        	<li>Sirris-member company: Free EluciDATA Community membership</li>
+                                                        	<li>Non-Sirris-member company: Annual membership fee - per calendar year 275,00 EUR (excl.VAT)</li>
+                                                        </ul>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <h2 class="rtecenter"><strong>APPLICATION</strong></h2>
+                                                                </div>
+                                                            <div>&nbsp;</div>
+                                                            </div>
+                                                        </div>
+                                                        <p>Interested in becoming a member of the EluciDATA Community? Contact us via <a href="mailto:elucidatalab@sirris.be">elucidatalab@sirris.be</a></p>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <aside class="col col--aside--right">
+                                <div class="row--main__aside row--main__aside--right">
+                                    <div class="panel-pane">
+                                        <!--<div class="contextual-links-wrapper contextual-links-processed"><a class="contextual-links-trigger" href="#">Configure</a>
+                                            <ul class="contextual-links"><li class="bean-edit first last"><a href="/block/cta-sidebar-info/edit?destination=node/276">Edit Block</a></li></ul>
+                                        </div>-->
+                                        <div class="ds-1col entity entity-bean bean-cta-bean contextual-links-region view-mode-default clearfix">
+                                            <div class="container--conditional">
+                                                <!--<div class="contextual-links-wrapper contextual-links-processed"><a class="contextual-links-trigger" href="#">Configure</a><ul class="contextual-links"><li class="bean- first"><a href="/block/cta-sidebar-info/edit?destination=node/276">Edit Block</a></li>
+                                                    <li class="manage-display last"><a href="/admin/structure/block-types/manage/cta-bean/display?destination=node/276">Manage display</a></li></ul>
+                                                </div>-->
+                                                <div class="bean__content">
+                                                    <div class="field-name-title-field field-type-text">
+                                                        <h2>Contact us</h2>
+                                                    </div>
+                                                    <div class="field-name-field-body-cta-bean-bean field-type-text-long">
+                                                        Would you like to discuss with one of our experts? Would you like to have some further information on our activities? Then get in touch with us!
+                                                    </div>
+                                                </div>
+                                                <div class="bean__actions">
+                                                    <div class="field-name-field-link-cta-bean-bean field-type-link-field">
+                                                        <a href="https://elucidatalab.be/contact">contact us</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contextual-links-region panel-pane pane-block pane-entityform-block-newsletter-subscription pane-entityform-block">
+                                        <!--<div class="contextual-links-wrapper contextual-links-processed"><a class="contextual-links-trigger" href="#">Configure</a><ul class="contextual-links"><li class="0 first"><a href="/admin/structure/block/manage/entityform_block/newsletter_subscription/configure?destination=node/276">Configure block</a></li>
+                                            <li class="entityform- last"><a href="/admin/reports/entityforms/submissions/newsletter_subscription?destination=node/276">Form Submissions</a></li></ul>
+                                        </div>-->
+                                        <h2 class="pane-title">Subscribing to mailing list    </h2>
+                                        <form class="entityform entitytype-newsletter_subscription-form" action="/elucidata-community-facilitator-and-network-your-ai-innovation-projects" method="post" id="newsletter-subscription-entityform-edit-form" accept-charset="UTF-8">
+                                            <div class="pre-instructions">
+                                                <p>Would you like to receive an update on our activities, upcoming events and trainings? Then register here to our mailinglist</p>
+                                            </div>
+                                            <input type="hidden" name="form_build_id" value="form-tFDsko5xu7NQqhqVLh6U-WfJgzcEaznupW1RRX2FeKY" class="js-once-input-processed">
+                                            <input type="hidden" name="form_token" value="61mRlu7kAXp3PgBHe97QlAxASRVukM-CGh73N66LXG8" class="js-once-input-processed">
+                                            <input type="hidden" name="form_id" value="newsletter_subscription_entityform_edit_form" class="js-once-input-processed">
+                                            <div class="field-type-email field-name-field-user-email field-widget-email-textfield form-wrapper" id="edit-field-user-email">
+                                                <div id="field-user-email-add-more-wrapper">
+                                                    <div class="text-full-wrapper">
+                                                        <div class="form-required">
+                                                            <label class="required" for="edit-field-user-email-en-0-email">Email</label>
+                                                            <input type="text" placeholder="Email" id="edit-field-user-email-en-0-email" name="field_user_email[en][0][email]" value="" size="30" maxlength="128" required="" class="js-once-input-processed">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions form-actions form-wrapper" id="edit-actions"><button type="submit" id="edit-submit" name="op" value="Subscribe">Subscribe</button></div>
+                                        </form>
+                                    </div>
+                                    <div class="contextual-links-region panel-pane pane-block pane-bean-doormat-gdpr pane-bean">
+                                        <!--<!<div class="contextual-links-wrapper contextual-links-processed"><a class="contextual-links-trigger" href="#">Configure</a><ul class="contextual-links"><li class="0 first last"><a href="/admin/structure/block/manage/bean/doormat-gdpr/configure?destination=node/276">Configure block</a></li></ul>
+                                        </div>-->
+                                        <div class="ds-1col entity entity-bean bean-default-bean contextual-links-region view-mode-default clearfix">
+                                            <!--<div class="contextual-links-wrapper contextual-links-processed"><a class="contextual-links-trigger" href="#">Configure</a><ul class="contextual-links"><li class="bean- first"><a href="/block/doormat-gdpr/edit?destination=node/276">Edit Block</a></li>
+                                                <li class="manage-display last"><a href="/admin/structure/block-types/manage/default-bean/display?destination=node/276">Manage display</a></li></ul>
+                                            </div>-->
+                                            <div class="field-name-field-body-deafault-bean field-type-text-long">
+                                                <p style="font-size:8pt">By subscribing you agree that the Data and AI Competence Lab of Sirris may collect and use your email, for providing you information on our activities, upcoming events and training sessions that you have agreed to receive. For further information, please refer to the <a href="http://www.sirris.be/disclaimer">Sirris Disclaimer.</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </aside>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'pythonic-excursions'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    } ());
+
+    $('.disqus-comment').each(function(){
+        var numCommentText = $(this).text(),
+            num = numCommentText.match(/\d+/g);
+        $(this).text(num)
+    });
+</script>
+        </div>
+<footer class="footer">
+   <div class="container bottom_border">
+      <div class="row">
+         <div class="col">
+            <h5 class="headin5_amrc col_white_amrc pt2">ABOUT EluciDATA Lab</h5>
+            <!--headin5_amrc-->
+            <p class="mb10"><img id="profile_img" align="left" src="/theme/img/PoweredBySirris_negatif.png"></p>
+            <p><i class="fa fa-envelope mr-2"></i>elucidatalab@sirris.be</p>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <ul class="foote_bottom_ul_amrc">
+         <li><a href="/">HOME</a></li>
+         <li><a href="about.html">ABOUT</a></li>
+         <li><a href="archives.html">ARCHIVE</a></li>
+      </ul>
+      <!--foote_bottom_ul_amrc ends here-->
+      <p class="text-center">&copy Sirris <a href="https://elucidata.be/gebruikersovereenkomst" target="_blank">User Agreement</a> <a href="https://elucidata.be/privacy-policy" target="_blank">Privacy policy</a><br>EluciDATA Lab -The Data and AI Competence Lab of Sirris</p>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="row" align="center">
+                  <div class="footer-icon"><a href="https://www.linkedin.com/company/sirris/"><i class="fab fa-linkedin-in"></i></a></div>
+                  <div class="footer-icon"><a href="https://github.com/EluciDATALab/elucidatalab.starterkits"><i class="fab fa-github"></i></a></div>
+              </div>
+          </div>
+      </div>
+
+      <!--social_footer_ul ends here-->
+   </div>
+</footer>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script src="/theme/libs/prism.js"></script>
+        <script src="/theme/libs/Countable.js"></script>
+
+        <script>
+            Prism.plugins.NormalizeWhitespace.setDefaults({
+                'remove-trailing': true,
+                'remove-indent': true,
+                'left-trim': true,
+                'right-trim': true,
+                /*'break-lines': 80,
+                'indent': 2,
+                'remove-initial-line-feed': false,
+                'tabs-to-spaces': 4,
+                'spaces-to-tabs': 4*/
+            });
+        </script>
+
+
+        <script type="text/javascript" src="/theme/js/custom.js"></script>
+            <script>
+                function validateForm(query)
+                {
+                    return (query.length > 0);
+                }
+            </script>
+    </body>
+</html>
