@@ -167,10 +167,10 @@ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
         <div class="article_content">
             <!--            -->
             <h2 id="multivariate-analysis">Multivariate Analysis<a class="headerlink" href="#multivariate-analysis" title="Permanent link">&para;</a></h2>
-<p><br/></p>
+<p><br/>
 <p align="center"><iframe src="https://player.vimeo.com/video/612904790?h=6427d908ea&color=e700ef" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <br/></p>
-<p><br/>
+<br/>
 Welcome to the fourth tutorial video on data exploration. In the former videos, we concentrated on uni- and bivariate analysis. In this video, we conclude the exploration of the bike-sharing dataset with a more sophisticated multivariate analysis, complementing the analyses presented before.</p>
 <p>At the end of the last video, we validated that the elevation plays a major role in explaining why some stations are unbalanced with respect to arrivals and departures. In other terms, the elevation embodies the 'cost' that a user has to face when moving between stations that are at different levels. This aspect, that is the cost of reaching nodes within a network, is a general problem that is faced in network analysis for identifying the best routing. For this reason, we continue the previous analysis by focusing on the 'cost' of reaching stations without the need of using the elevation explicitly. By making this problem more generic, the proposed analysis can be applied also to other networks where there are 'costs' for traveling between nodes which influence routing. We redefine hence the previous problem setting as follows: each bike station represents a node of a network and each node is connected through an edge to all other nodes of the network. The single edges are bidirectional, and each direction has an associated cost. In our case, the cost is represented by the time required for traveling between two stations. We assume that given the same distance, the time required for moving between two stations is determined by the difference in elevation, hence, biking uphill requires more time than biking downhill. As a first step to perform this analysis, we compute the trip duration among unbalanced stations. An excerpt of these trip durations is provided in the table on the right.</p>
 <p><center><img src="../Data Exploration/img/SK_specific/DE_figure30.png" width="700" class="center" /></center></p>
