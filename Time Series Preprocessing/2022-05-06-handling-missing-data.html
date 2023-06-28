@@ -174,8 +174,8 @@ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
 <p>In this video, we will finally use the insights from before and impute missing values in the dataset.</p>
 <p>Real-world industrial datasets often suffer from missing data due to several reasons. Missing data occurs often due to sensor malfunctioning or communication errors. In addition, if we have removed outliers as shown in the previous video, these will also show up as missing values in the data.</p>
 <p>In both cases, we can fill the missing values using so-called data imputation techniques. Multiple techniques exist and which one to choose depends on the data characteristics. The choice depends on the presence of trends, the length of the missing period, etc. In this video, we will present 3 different imputation techniques, namely
-* Linear interpolation
-* Fleet-based interpolation, and
+<em> Linear interpolation
+</em> Fleet-based interpolation, and
 * Pattern-based imputation</p>
 <p>To evaluate the efficiency of the different methods, we will create a set of synthetic missing data events with varying durations. The main advantage of this approach is that it allows us to compare the outcome of the imputation procedure with the real, observed values.</p>
 <p>We start with the linear interpolation of values and interpolation based on the fleet median. Linear interpolation is a simple technique that is frequently used in case a small number of points are missing within a particular period.  It simply connects the last point before and the first point after the missing data episode with a straight line.</p>
