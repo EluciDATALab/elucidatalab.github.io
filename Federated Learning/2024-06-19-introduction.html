@@ -167,7 +167,7 @@ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
         <div class="article_content">
             <!--            <p id="list-of-translations">
 This post is also available in:
-    <a href="/Data Exploration/2022-09-02-introduction.html">en</a>,     <a href="/Intelligent data retention/2023-12-01-introduction.html">en</a>,     <a href="/Time Series Preprocessing/2022-05-02-introduction.html">en</a>,     <a href="/Feature Engineering/2023-04-01-introduction.html">en</a>,     <a href="/Remaining Useful Life Prediction/2022-05-02-introduction.html">en</a>,     <a href="/Resource Demand Forecasting/2022-05-02-introduction.html">en</a> and    <a href="/Advanced Data Visualization/2022-05-02-introduction.html">en</a></p>
+    <a href="/Time Series Preprocessing/2022-05-02-introduction.html">en</a>,     <a href="/Intelligent data retention/2023-12-01-introduction.html">en</a>,     <a href="/Feature Engineering/2023-04-01-introduction.html">en</a>,     <a href="/Resource Demand Forecasting/2022-05-02-introduction.html">en</a>,     <a href="/Advanced Data Visualization/2022-05-02-introduction.html">en</a>,     <a href="/Remaining Useful Life Prediction/2022-05-02-introduction.html">en</a> and    <a href="/Data Exploration/2022-09-02-introduction.html">en</a></p>
 -->
             <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <!-- <br/>
@@ -185,13 +185,13 @@ This post is also available in:
 </ul>
 <p>These challenges necessitate advanced strategies for model training and maintenance to ensure that predictive models remain accurate and efficient over time without compromising privacy or incurring prohibitive communication costs.</p>
 <h3 id="business-goal">Business goal<a class="headerlink" href="#business-goal" title="Permanent link">&para;</a></h3>
-<p>The business goal for this Starter Kit is <strong>electricity forecasting</strong> in federated learning environments. Specifically, a <strong>concept drift mitigation</strong> strategy will be applied to cope with the occurence of concept drift due to the heterogeneous and dynamic nature of electricity usage data. The methodology, called <em>FedRepo</em>, was introduced by Tsiporkova et al. [1] and aims to provide a robust solution that maintains the accuracy and efficiency of the federated models over time, ensuring they adapt to changes in data dynamics while minimizing communication overhead.</p>
+<p>The business goal for this Starter Kit is <strong>electricity forecasting</strong> in collaborative distributed environments. Specifically, a <strong>concept drift mitigation</strong> strategy will be applied to cope with the occurrence of concept drift due to the heterogeneous and dynamic nature of electricity usage data. The methodology, called <em>FedRepo</em>, was introduced by Tsiporkova et al. [1] and aims to provide a robust solution that maintains the accuracy and efficiency of the federated models over time, ensuring they adapt to changes in data dynamics while minimising communication overhead.</p>
 <h3 id="application-context">Application context<a class="headerlink" href="#application-context" title="Permanent link">&para;</a></h3>
 <p>The FedRepo methodology is applicable in various settings where data privacy and limited connectivity are major concerns:</p>
 <ul>
 <li>Healthcare: Hospitals and medical institutions can collaborate on developing predictive models or improving diagnostic tools on more diverse data without actually sharing patient data.</li>
 <li>Wearables: User experience of several features (e.g. text prediction) can be enhanced on personal devices without compromising privacy.</li>
-<li>Industrial: Assets manufactured by a third party (e.g. printers) can be used to collaborately learn predictive models without each customer having to share its data. For example, data from various printers in different settings can be used to predict maintenance needs or optimize performance without exposing individual usage patterns or sensitive business information.</li>
+<li>Industrial: Assets manufactured by a third party (e.g. printers) can be used to collaboratively learn predictive models without each customer having to share its data. For example, data from various assets in different settings can be used to predict maintenance needs or optimise performance without exposing individual usage patterns or sensitive business information.</li>
 </ul>
 <h3 id="starter-kit-outline">Starter Kit outline<a class="headerlink" href="#starter-kit-outline" title="Permanent link">&para;</a></h3>
 <p>We will first describe the dataset that we will be using for this Starter Kit, which consists of accelerometer data containing six time series signals. Then, we conceptually explain the Swinging Door Trending technique, and apply this on the six signals separately. Afterwards, we apply the technique on the six signals at once, which makes sense since accelerometer signals are often correlated. We then evaluate the results of both compression approaches on a technical level by considering how much they manage to compress the original signals and what is the associated error. Finally, we validate the compression within a concrete application, i.e. event detection.</p>
@@ -204,9 +204,9 @@ This post is also available in:
 <li>...</li>
 </ul>
 <p>The data used is collected by the UK Power Networks led Low Carbon London project (<a href="https://data.london.gov.uk/dataset/smartmeter-energy-use-data-in-london-households">available here</a>). It consists of 5,567 households (given in column <code>consumer</code>) in London representing a balanced sample representative of the Greater London population with a 30-minutes granularity between November 2011 and February 2014. The consumption (in column <code>consumption</code>) is given in kWh. For demonstrating our methodology, we randomly selected 300 households for which we ensured that the data is available until at least 01/2014. For these households, a repository of federated models will be trained in order to forecast the consumption within the next 30 minutes.</p>
-<p>[1] Tsiporkova, E., De Vis, M., Klein, S., Hristoskova, A., &amp; Boeva, V. (2023). Mitigating Concept Drift in Distributed Contexts with Dynamic Repository of Federated Models. In 2023 IEEE International Conference on Big Data (BigData) (pp. 2690-2699). IEEE.</p>
-<p>[2] Christian Beckel, Leyna Sadamori, and Silvia Santini. 2013. Automatic socio-economic classification of households using electricity consumption data. In Proceedings of the fourth international conference on Future energy systems (e-Energy '13). Association for Computing Machinery, New York, NY, USA, 75–86. https://doi.org/10.1145/2487166.2487175</p>
-<p>[3] Omran, M.G.H., Salman, A. &amp; Engelbrecht, A.P. Dynamic clustering using particle swarm optimization with application in image segmentation. Pattern Anal Applic 8, 332–344 (2006). https://doi.org/10.1007/s10044-005-0015-5</p>
+<p>[1] E. Tsiporkova, M. D. Vis, S. Klein, A. Hristoskova, and V. Boeva, “Mitigating Concept Drift in Distributed Contexts with Dynamic Repository of Federated Models,” 2023 IEEE International Conference on Big Data (BigData). IEEE, 15-Dec-2023.</p>
+<p>[2] C. Beckel, L. Sadamori, and S. Santini, “Automatic socio-economic classification of households using electricity consumption data,” Proceedings of the fourth international conference on Future energy systems. ACM, 21-May-2013.</p>
+<p>[3] M. G. H. Omran, A. Salman, and A. P. Engelbrecht, “Dynamic clustering using particle swarm optimization with application in image segmentation,” Pattern Analysis and Applications, vol. 8, no. 4. Springer Science and Business Media LLC, pp. 332–344, 24-Nov-2005.</p>
         </div>
         <div class="col-xs-12" style="height:25px;"></div>
         <p text-align='right'>Authors: EluciDATA Lab</p>
@@ -216,7 +216,7 @@ This post is also available in:
         <nav>
         <ul class="articles-timeline">
             <li class="previous-article">« <a href="/Blog/20211117_giving_circular_economy_a_boost.html" title="Previous: Giving circular economy a boost by improving refurbishment process of household appliances">Giving circular economy a boost by improving refurbishment process of household appliances</a></li>
-            <li class="next-article"><a href="/Federated Learning/2024-06-19-introduction.html" title="Next: Introduction">Introduction</a> »</li>
+            <li class="next-article"><a href="/Time Series Preprocessing/2022-05-02-introduction.html" title="Next: Introduction">Introduction</a> »</li>
         </ul>
         </nav>
         </aside>
