@@ -15,8 +15,8 @@ gem 'jekyll-sass-converter', '~> 3.0.0'
 gem 'sass-embedded', '~> 1.58.3', platforms: [:ruby]
 # gem 'fix', '~> 5.0.4'
 gem 'public_suffix', '5.0.4'
-
-gem "github-pages", "~> 231", group: :jekyll_plugins
+gem 'csv'
+# gem "github-pages", "~> 231", group: :jekyll_plugins
 
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
