@@ -5,9 +5,7 @@ image: ../src/assets/vibration-fingerprint.png
 date:  2024-10-31
 author: EluciDATALab
 categories:
-    - Context detection
     - Anomaly detection
-    - Performance profiling
 description: Contextual Anomaly detection
 excerpt: ""
 notebook: https://colab.research.google.com/github/EluciDATALab/elucidatalab.starterkits/blob/main/notebooks/SK_1_2_2_Contextual_Anomaly_Detection/elucidata_starterkit_1_2_2.ipynb
