@@ -26,7 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 url: "https://elucidatalab.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Elucidata
 github_username:  Elucidata
-# destination: docs/
+destination: docs/
 baseurl: ""
 
 # Build settings
