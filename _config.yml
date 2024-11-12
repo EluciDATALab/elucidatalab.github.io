@@ -48,8 +48,6 @@ postcss:
 # paginate: 10
 # paginate_path: "/page:num"
 # baseurl: "/site"
-url: "https://elucidatalab.github.io/"
-baseurl: ""
 incremental: true
 
 # Documentation settings
