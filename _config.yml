@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Elucidata - Your AI experience
-email: berre.staelens@student.odisee.be
+email: henrique.cabral@sirris.be
 description: >- # this means to ignore newlines until "baseurl:"
   Elucidata - AI Starter kits Experience. AI Starter Kits with complementary video tutorials, Interactive Experience, Bring Your Own Data workshops.
 
