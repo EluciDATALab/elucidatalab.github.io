@@ -7,7 +7,7 @@ author: EluciDATALab
 categories:
     - Anomaly detection
 description: Contextual Anomaly detection
-excerpt: ""
+excerpt: " "
 notebook: https://colab.research.google.com/github/EluciDATALab/elucidatalab.starterkits/blob/main/notebooks/SK_1_2_2_Contextual_Anomaly_Detection/elucidata_starterkit_1_2_2.ipynb
 ---
 
