@@ -1,4 +1,4 @@
--
+---
 layout: skit_detail
 title: Contextual Anomaly Detection
 image: ../src/assets/vibration-fingerprint.png
